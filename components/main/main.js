@@ -1,10 +1,8 @@
-import MainLayout from "./main.layout";
-import { memo, useState } from "react";
+import MainLayout from './main.layout';
+import { memo, useState } from 'react';
 
 const Main = () => {
-  const [qwe, setQwe] = useState("asd");
-
-  return <MainLayout qwe={qwe} />;
+  return <MainLayout />;
 };
 
 export default memo(Main);

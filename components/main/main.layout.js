@@ -1,7 +1,8 @@
-import { memo } from "react";
+import { memo } from 'react';
+import Footer from '../footer/footer';
 
 const MainLayout = ({ qwe }) => {
-  return <>{qwe}</>;
+  return <Footer />;
 };
 
 export default memo(MainLayout);
