@@ -15,10 +15,14 @@ import {
   SVGWrapper,
   SocialWrapper,
   ContactWrapper,
+  ItemWrapper,
+  IconWrapper,
+  InfoContent,
+  TitleContent,
 } from './footer.styled';
 import { ReactSVG } from 'react-svg';
 
-import { PrimatyText, Text, SecondaryText, DarkText } from '../ui/text';
+import { SecondaryText } from '../ui/text';
 
 const FooterLayout = () => {
   return (
@@ -32,16 +36,39 @@ const FooterLayout = () => {
           <InfoItemWrapper>
             <ContactWrapper>
               <ItemTitle>Контактная информация</ItemTitle>
-              <DarkText>Звоните по номеру:</DarkText>
-              <PhoneNumber>+7 (918) 537-96-12</PhoneNumber>
+              <ItemWrapper>
+                <IconWrapper>
+                  <ReactSVG src="icons/call_icon.svg"></ReactSVG>
+                </IconWrapper>
+                <InfoContent>
+                  <TitleContent>Звоните по номеру:</TitleContent>
+                  <PhoneNumber>+7 (918) 537-96-12</PhoneNumber>
+                </InfoContent>
+              </ItemWrapper>
             </ContactWrapper>
             <ContactWrapper>
-              <DarkText>Электронная почта:</DarkText>
-              <Email>evladykin@gmail.com</Email>
+              <ItemWrapper>
+                <IconWrapper>
+                  <ReactSVG src="icons/map_icon.svg"></ReactSVG>
+                </IconWrapper>
+                <InfoContent>
+                  <TitleContent>Мы находимся по адресу:</TitleContent>
+                  <SecondaryText>
+                    Ростовская область, город Таганрог, ул. Кузнечная, д. 6
+                  </SecondaryText>
+                </InfoContent>
+              </ItemWrapper>
             </ContactWrapper>
             <ContactWrapper>
-              <DarkText>Мы находимся по адресу:</DarkText>
-              <SecondaryText>Ростовская область, город Таганрог, ул. Кузнечная, д. 6</SecondaryText>
+              <ItemWrapper>
+                <IconWrapper>
+                  <ReactSVG src="icons/mail_icon.svg"></ReactSVG>
+                </IconWrapper>
+                <InfoContent>
+                  <TitleContent>Электронная почта:</TitleContent>
+                  <Email>evladykin@gmail.com</Email>
+                </InfoContent>
+              </ItemWrapper>
             </ContactWrapper>
           </InfoItemWrapper>
           <InfoItemWrapper>

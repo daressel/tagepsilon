@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Color } from '../../constants/colors';
-import { PrimaryText, Text, SecondaryText } from '../ui/text';
+import { PrimaryText, Text, SecondaryText, DarkText } from '../ui/text';
 
 export const FooterWrapper = styled.div`
   display: flex;
@@ -9,12 +9,13 @@ export const FooterWrapper = styled.div`
   width: 100%;
   padding-inline: 30px;
   color: white;
-  background-image: linear-gradient(rgba(3, 3, 5, 0.65) 0%, rgba(3, 3, 5, 0.65) 100%),
+  background-image: linear-gradient(rgba(3, 3, 5, 0.45) 0%, rgba(3, 3, 5, 0.45) 100%),
     url('/earth.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  background-attachment: scroll, fixed;
   background-position: center;
-  /* height: 2000px; */
+  height: 1000px;
   border-top: 1px solid ${Color.Dark};
   border-bottom: 1px solid ${Color.Dark};
 `;
@@ -49,6 +50,16 @@ export const InfoItemWrapper = styled.div`
 export const ContactWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const ItemWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  svg {
+    filter: invert(74%) sepia(91%) saturate(307%) hue-rotate(101deg) brightness(87%) contrast(91%);
+  }
 `;
 
 export const ItemTitle = styled(Text)`
@@ -113,4 +124,19 @@ export const SVGWrapper = styled.div`
 export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const IconWrapper = styled.div`
+  width: 20px;
+  height: 20px;
+`;
+
+export const InfoContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-inline: 10px;
+`;
+
+export const TitleContent = styled(DarkText)`
+  margin-bottom: 5px;
 `;
