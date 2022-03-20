@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import Footer from '../footer/footer';
 
-const MainLayout = ({ qwe }) => {
+const MainLayout = () => {
   return <Footer />;
 };
 
