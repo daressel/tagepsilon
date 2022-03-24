@@ -3,7 +3,11 @@ import HomeLayout from './home.layout';
 import ContentWrapper from '../../smart/contentWrapper/contentWrapper';
 
 const Home = () => {
-  return <ContentWrapper Component={HomeLayout} tabIndex={1} />;
+  return (
+    <>
+      <HomeLayout />
+    </>
+  );
 };
 
 export default memo(Home);
