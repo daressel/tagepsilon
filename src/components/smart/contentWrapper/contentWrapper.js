@@ -4,6 +4,8 @@ import { memo } from 'react';
 import prefixes from '../../../core/constants/prefixes';
 import tabNames from '../../../core/constants/tabNames';
 
+const htmlEnding = ''; // for build need write here '.html'
+
 const ContentWrapper = ({ children, tabKey }) => {
   const { Header, Footer, Content } = Layout;
   return (
@@ -16,16 +18,16 @@ const ContentWrapper = ({ children, tabKey }) => {
             defaultSelectedKeys={`${prefixes.tag}_${tabKey}`}
           >
             <Menu.Item key={`${prefixes.tag}_${tabNames.home}`}>
-              <Link href={`/${tabNames.home}`}>Home</Link>
+              <Link href={`/${tabNames.home}${htmlEnding}`}>Home</Link>
             </Menu.Item>
             <Menu.Item key={`${prefixes.tag}_${tabNames.services}`}>
-              <Link href={`/${tabNames.services}`}>Services</Link>
+              <Link href={`/${tabNames.services}${htmlEnding}`}>Services</Link>
             </Menu.Item>
             <Menu.Item key={`${prefixes.tag}_${tabNames.contacts}`}>
-              <Link href={`/${tabNames.contacts}`}>Contacts</Link>
+              <Link href={`/${tabNames.contacts}${htmlEnding}`}>Contacts</Link>
             </Menu.Item>
             <Menu.Item key={`${prefixes.tag}_${tabNames.about}`}>
-              <Link href={`/${tabNames.about}`}>About</Link>
+              <Link href={`/${tabNames.about}${htmlEnding}`}>About</Link>
             </Menu.Item>
           </Menu>
         </Header>
