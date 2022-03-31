@@ -1,6 +1,7 @@
 import colors from '../../../core/constants/colors';
 import stylesProps from '../../../core/constants/stylesProps';
 import styled from 'styled-components';
+import mediaSize from '../../../core/config/mediaSize';
 
 export const NavbarWrapper = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const NavbarWrapper = styled.div`
   background-color: ${colors.Primary};
   color: ${colors.White};
   position: fixed;
-  justify-content: center;
+  justify-content: space-between;
 `;
 
 export const NavbarItem = styled.div`
@@ -19,10 +20,36 @@ export const NavbarItem = styled.div`
   height: ${stylesProps.navBarHeight};
   padding-inline: 15px;
   cursor: pointer;
+  width: 200px;
+  justify-content: center;
   transition: all 0.2s ease-in;
   :hover {
     filter: brightness(1.1);
   }
+  ${({ active }) =>
+    active &&
+    `
+    filter: brightness(1.1);
+  `};
+  @media ${mediaSize.desktop.max} {
+    width: 260px;
+  }
+  @media ${mediaSize.laptopL.max} {
+    width: 170px;
+  }
+  @media ${mediaSize.laptop.max} {
+    width: 115px;
+  }
+  @media ${mediaSize.tablet.max} {
+    width: 90px;
+  }
+  @media ${mediaSize.mobileL.max} {
+    display: none;
+  }
+`;
+
+export const NavbarItemsWrapper = styled.div`
+  display: flex;
 `;
 
 export const Title = styled.span`
@@ -31,12 +58,23 @@ export const Title = styled.span`
 
 export const LogoWrapper = styled.div`
   height: ${stylesProps.logoSize};
-  width: ${stylesProps.logoSize};
-  position: absolute;
-  top: ${stylesProps.logoPos};
-  left: ${stylesProps.logoPos};
+  min-width: ${stylesProps.logoSize};
+  margin-inline: 70px;
+  align-self: center;
   background-image: url('/images/logo_without_back.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  @media ${mediaSize.desktop.max} {
+    margin-inline: 40px;
+  }
+  @media ${mediaSize.laptopL.max} {
+    margin-inline: 30px;
+  }
+  @media ${mediaSize.laptop.max} {
+    margin-inline: 20px;
+  }
+  @media ${mediaSize.tablet.max} {
+    margin-inline: 10px;
+  }
 `;
