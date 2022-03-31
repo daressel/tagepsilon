@@ -1,7 +1,7 @@
 import colors from '../../../core/constants/colors';
 import stylesProps from '../../../core/constants/stylesProps';
 import styled from 'styled-components';
-import mediaSize from '../../../core/config/mediaSize';
+import mediaSize from '../../../core/constants/mediaSize';
 
 export const NavbarWrapper = styled.div`
   display: flex;
@@ -77,4 +77,8 @@ export const LogoWrapper = styled.div`
   @media ${mediaSize.tablet.max} {
     margin-inline: 10px;
   }
+`;
+
+export const MenuItem = styled.div`
+  display: flex;
 `;

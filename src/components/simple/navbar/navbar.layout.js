@@ -5,7 +5,9 @@ import {
   NavbarItem,
   NavbarWrapper,
   Title,
+  MenuItem,
 } from './navbar.styled';
+import SvgIcon from '../../ui/svg/svg';
 
 const NavbarLayout = ({ navbarItems, handleActiveTab }) => {
   return (
@@ -23,6 +25,9 @@ const NavbarLayout = ({ navbarItems, handleActiveTab }) => {
             </NavbarItem>
           ))}
         </NavbarItemsWrapper>
+        <MenuItem>
+          <SvgIcon src="icons/list_menu_icon.svg" />
+        </MenuItem>
       </NavbarWrapper>
     </>
   );
