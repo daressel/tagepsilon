@@ -22,14 +22,14 @@ export const NavbarItem = styled.div`
   cursor: pointer;
   width: 200px;
   justify-content: center;
-  transition: all 0.2s ease-in;
+  transition: all 0.3s ease-out;
   :hover {
-    filter: brightness(1.1);
+    filter: brightness(1.15);
   }
   ${({ active }) =>
     active &&
     `
-    filter: brightness(1.1);
+    filter: brightness(1.15);
   `};
   @media ${mediaSize.desktop.max} {
     width: 260px;
@@ -81,4 +81,8 @@ export const LogoWrapper = styled.div`
 
 export const MenuItem = styled.div`
   display: flex;
+  display: none;
+  @media ${mediaSize.mobileL.max} {
+    display: flex;
+  }
 `;
