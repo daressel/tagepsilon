@@ -4,12 +4,21 @@ import {
   NavbarItemsWrapper,
   NavbarItem,
   NavbarWrapper,
+  SideNavbarWrapper,
+  SideNavbarItem,
+  SideNavbarItemsWrapper,
   Title,
-  MenuItem,
+  MenuIcon,
+  CloseIcon,
 } from './navbar.styled';
 import SvgIcon from '../../ui/svg/svg';
 
-const NavbarLayout = ({ navbarItems, handleActiveTab }) => {
+const NavbarLayout = ({
+  navbarItems,
+  handleActiveTab,
+  handleToggleSideMenu,
+  toggleSideMenu,
+}) => {
   return (
     <>
       <NavbarWrapper>
@@ -25,10 +34,27 @@ const NavbarLayout = ({ navbarItems, handleActiveTab }) => {
             </NavbarItem>
           ))}
         </NavbarItemsWrapper>
-        <MenuItem>
+        <MenuIcon onClick={handleToggleSideMenu}>
           <SvgIcon src="icons/list_menu_icon.svg" />
-        </MenuItem>
+        </MenuIcon>
       </NavbarWrapper>
+      <SideNavbarWrapper toggleSideMenu={toggleSideMenu}>
+        <LogoWrapper />
+        <CloseIcon onClick={handleToggleSideMenu}>
+          <SvgIcon src="icons/cross_icon.svg" />
+        </CloseIcon>
+        <SideNavbarItemsWrapper>
+          {navbarItems.map((navbarItem, index) => (
+            <SideNavbarItem
+              key={index}
+              onClick={() => handleActiveTab(index)}
+              active={navbarItem.active}
+            >
+              <Title>{navbarItem.title}</Title>
+            </SideNavbarItem>
+          ))}
+        </SideNavbarItemsWrapper>
+      </SideNavbarWrapper>
     </>
   );
 };

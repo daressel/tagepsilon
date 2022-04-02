@@ -2,7 +2,7 @@ import { memo, useState } from 'react';
 import NavbarLayout from './navbar.layout';
 import navbarItems from '../../../core/config/navbarItems';
 
-const Navbar = () => {
+const Navbar = ({ handleToggleSideMenu, toggleSideMenu }) => {
   const [items, setItems] = useState(navbarItems);
 
   const handleActiveTab = (tabIndex) => {
@@ -12,9 +12,17 @@ const Navbar = () => {
         return item;
       })
     );
+    handleToggleSideMenu();
   };
 
-  return <NavbarLayout navbarItems={items} handleActiveTab={handleActiveTab} />;
+  return (
+    <NavbarLayout
+      navbarItems={items}
+      handleActiveTab={handleActiveTab}
+      handleToggleSideMenu={handleToggleSideMenu}
+      toggleSideMenu={toggleSideMenu}
+    />
+  );
 };
 
 export default memo(Navbar);

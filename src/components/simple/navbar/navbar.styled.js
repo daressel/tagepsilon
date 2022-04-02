@@ -20,7 +20,6 @@ export const NavbarItem = styled.div`
   height: ${stylesProps.navBarHeight};
   padding-inline: 15px;
   cursor: pointer;
-  width: 200px;
   justify-content: center;
   transition: all 0.3s ease-out;
   :hover {
@@ -52,6 +51,28 @@ export const NavbarItemsWrapper = styled.div`
   display: flex;
 `;
 
+export const SideNavbarWrapper = styled(NavbarWrapper)`
+  flex-direction: column;
+  justify-content: unset;
+  height: 100%;
+  transition: all 0.4s ease-out;
+  ${({ toggleSideMenu }) => (toggleSideMenu ? `left: 0%` : 'left: 100%')};
+  @media ${mediaSize.tablet.min} {
+    left: 100%;
+  }
+`;
+
+export const SideNavbarItem = styled(NavbarItem)`
+  width: 100%;
+  @media ${mediaSize.mobileL.max} {
+    display: flex;
+  }
+`;
+
+export const SideNavbarItemsWrapper = styled(NavbarItemsWrapper)`
+  flex-direction: column;
+`;
+
 export const Title = styled.span`
   align-self: center;
 `;
@@ -59,30 +80,26 @@ export const Title = styled.span`
 export const LogoWrapper = styled.div`
   height: ${stylesProps.logoSize};
   min-width: ${stylesProps.logoSize};
-  margin-inline: 70px;
+  margin-inline: 30px;
   align-self: center;
   background-image: url('/images/logo_without_back.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  @media ${mediaSize.desktop.max} {
-    margin-inline: 40px;
-  }
-  @media ${mediaSize.laptopL.max} {
-    margin-inline: 30px;
-  }
-  @media ${mediaSize.laptop.max} {
-    margin-inline: 20px;
-  }
-  @media ${mediaSize.tablet.max} {
-    margin-inline: 10px;
-  }
 `;
 
-export const MenuItem = styled.div`
-  display: flex;
+export const MenuIcon = styled.div`
   display: none;
   @media ${mediaSize.mobileL.max} {
     display: flex;
+  }
+`;
+export const CloseIcon = styled.div`
+  display: flex;
+  position: absolute;
+  right: 0;
+  svg {
+    width: 60px;
+    height: 60px;
   }
 `;

@@ -12,7 +12,7 @@ export const SVGWrapper = styled.div`
   svg {
     width: 45px;
     height: 45px;
-    filter: invert(65%) sepia(0%) saturate(1%) hue-rotate(184deg)
-      brightness(97%) contrast(84%);
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(171deg)
+      brightness(104%) contrast(101%);
   }
 `;
