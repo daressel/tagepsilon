@@ -6,6 +6,7 @@ import mediaSize from '../../../core/constants/mediaSize';
 export const NavbarWrapper = styled.div`
   display: flex;
   width: 100%;
+  z-index: 90;
   height: ${stylesProps.navBarHeight};
   top: 0;
   background-color: ${colors.Primary};
@@ -45,7 +46,7 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
   flex-direction: column;
   justify-content: unset;
   height: 100%;
-  z-index: 1;
+  z-index: 100;
   transition: all 0.4s ease-out;
   ${({ toggleSideMenu }) => (toggleSideMenu ? `left: 0%` : 'left: 100%')};
   @media ${mediaSize.tablet.min} {
@@ -77,7 +78,6 @@ export const LogoWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  cursor: pointer;
 `;
 
 export const MenuIcon = styled.div`
