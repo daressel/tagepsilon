@@ -12,6 +12,7 @@ import {
   CloseIcon,
 } from './navbar.styled';
 import SvgIcon from '../../ui/svg/svg';
+import Link from 'next/link';
 
 const NavbarLayout = ({
   navbarItems,
@@ -25,13 +26,15 @@ const NavbarLayout = ({
         <LogoWrapper />
         <NavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <NavbarItem
-              key={index}
-              onClick={() => handleActiveTab(index)}
-              active={navbarItem.active}
-            >
-              <Title>{navbarItem.title}</Title>
-            </NavbarItem>
+            <Link href={navbarItem.href}>
+              <NavbarItem
+                key={index}
+                onClick={() => handleActiveTab(index)}
+                active={navbarItem.active}
+              >
+                <Title>{navbarItem.title}</Title>
+              </NavbarItem>
+            </Link>
           ))}
         </NavbarItemsWrapper>
         <MenuIcon onClick={handleToggleSideMenu}>
@@ -45,13 +48,15 @@ const NavbarLayout = ({
         </CloseIcon>
         <SideNavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <SideNavbarItem
-              key={index}
-              onClick={() => handleActiveTab(index)}
-              active={navbarItem.active}
-            >
-              <Title>{navbarItem.title}</Title>
-            </SideNavbarItem>
+            <Link href={navbarItem.href}>
+              <SideNavbarItem
+                key={index}
+                onClick={() => handleActiveTab(index)}
+                active={navbarItem.active}
+              >
+                <Title>{navbarItem.title}</Title>
+              </SideNavbarItem>
+            </Link>
           ))}
         </SideNavbarItemsWrapper>
       </SideNavbarWrapper>

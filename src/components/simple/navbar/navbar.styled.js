@@ -21,6 +21,7 @@ export const NavbarItem = styled.div`
   padding-inline: 15px;
   cursor: pointer;
   justify-content: center;
+  width: 100%;
   transition: all 0.3s ease-out;
   :hover {
     filter: brightness(1.15);
@@ -30,31 +31,21 @@ export const NavbarItem = styled.div`
     `
     filter: brightness(1.15);
   `};
-  @media ${mediaSize.desktop.max} {
-    width: 260px;
-  }
-  @media ${mediaSize.laptopL.max} {
-    width: 170px;
-  }
-  @media ${mediaSize.laptop.max} {
-    width: 115px;
-  }
-  @media ${mediaSize.tablet.max} {
-    width: 90px;
-  }
-  @media ${mediaSize.mobileL.max} {
-    display: none;
-  }
 `;
 
 export const NavbarItemsWrapper = styled.div`
   display: flex;
+  width: 100%;
+  @media ${mediaSize.mobileL.max} {
+    display: none;
+  }
 `;
 
 export const SideNavbarWrapper = styled(NavbarWrapper)`
   flex-direction: column;
   justify-content: unset;
   height: 100%;
+  z-index: 1;
   transition: all 0.4s ease-out;
   ${({ toggleSideMenu }) => (toggleSideMenu ? `left: 0%` : 'left: 100%')};
   @media ${mediaSize.tablet.min} {
@@ -64,13 +55,13 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
 
 export const SideNavbarItem = styled(NavbarItem)`
   width: 100%;
-  @media ${mediaSize.mobileL.max} {
-    display: flex;
-  }
 `;
 
 export const SideNavbarItemsWrapper = styled(NavbarItemsWrapper)`
   flex-direction: column;
+  @media ${mediaSize.mobileL.max} {
+    display: flex;
+  }
 `;
 
 export const Title = styled.span`
@@ -86,6 +77,7 @@ export const LogoWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  cursor: pointer;
 `;
 
 export const MenuIcon = styled.div`

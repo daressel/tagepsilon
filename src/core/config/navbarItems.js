@@ -1,7 +1,7 @@
 export default [
-  { title: 'Главная', active: false },
-  { title: 'Услуги', active: false },
-  { title: 'Продукция', active: false },
-  { title: 'Контакты', active: false },
-  { title: 'О нас', active: false },
+  { title: 'Главная', active: false, href: 'home' },
+  { title: 'Услуги', active: false, href: 'services' },
+  // { title: 'Продукция', active: false, href: 'products' },
+  { title: 'Контакты', active: false, href: 'contacts' },
+  { title: 'О нас', active: false, href: 'about-us' },
 ];
