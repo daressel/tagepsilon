@@ -97,7 +97,7 @@ export const MenuIcon = styled.div`
 export const CloseIcon = styled.div`
   display: flex;
   position: absolute;
-  right: 0;
+  right: -10px;
   svg {
     width: 60px;
     height: 60px;
