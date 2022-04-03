@@ -95,3 +95,15 @@ export const CloseIcon = styled.div`
     height: 60px;
   }
 `;
+
+export const CallIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  min-width: 100px;
+  height: ${stylesProps.navBarHeight};
+  background-color: ${colors.Primary};
+  transition: all 0.3s ease-out;
+  :hover {
+    filter: brightness(1.15);
+  }
+`;

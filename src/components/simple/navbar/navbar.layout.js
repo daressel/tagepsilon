@@ -10,6 +10,7 @@ import {
   Title,
   MenuIcon,
   CloseIcon,
+  CallIcon,
 } from './navbar.styled';
 import SvgIcon from '../../ui/svg/svg';
 import Link from 'next/link';
@@ -35,6 +36,9 @@ const NavbarLayout = ({
               </NavbarItem>
             </Link>
           ))}
+          <CallIcon>
+            <SvgIcon src="icons/call_icon.svg" />
+          </CallIcon>
         </NavbarItemsWrapper>
         <MenuIcon onClick={handleToggleSideMenu}>
           <SvgIcon src="icons/list_menu_icon.svg" />

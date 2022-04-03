@@ -40,7 +40,7 @@ export const DarkMask = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  opacity: 0.7;
+  opacity: 0.5;
   background-color: ${colors.Black};
 `;
 
