@@ -6,7 +6,7 @@ const Products = () => {
   const [selectedItem, setSelectedItem] = useState();
 
   const handleSelectItem = (index) => {
-    console.log(services[index]);
+    window.scrollTo(0, 0);
     setSelectedItem(services[index]);
   };
 

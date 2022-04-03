@@ -10,7 +10,6 @@ import {
 import Product from '../../simple/product/product';
 
 const ServicesLayout = ({ items, selectedItem, handleSelectItem }) => {
-  console.log(selectedItem);
   return (
     <>
       <PageWrapper>
