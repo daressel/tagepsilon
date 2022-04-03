@@ -26,9 +26,8 @@ const NavbarLayout = ({
         <LogoWrapper />
         <NavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <Link href={navbarItem.href}>
+            <Link href={navbarItem.href} passHref key={index}>
               <NavbarItem
-                key={index}
                 onClick={() => handleActiveTab(index)}
                 active={navbarItem.active}
               >
@@ -48,9 +47,8 @@ const NavbarLayout = ({
         </CloseIcon>
         <SideNavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <Link href={navbarItem.href}>
+            <Link href={navbarItem.href} passHref key={index}>
               <SideNavbarItem
-                key={index}
                 onClick={() => handleActiveTab(index)}
                 active={navbarItem.active}
               >

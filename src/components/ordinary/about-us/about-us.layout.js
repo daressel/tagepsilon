@@ -14,7 +14,7 @@ const AboutUsLayout = () => {
       <PageWrapper>
         <AboutUsWrapper>
           <Title>О компании</Title>
-          <SubTitle>ЧЕМ ЗАНИМАЕТСЯ НАША КОМПАНИЯ</SubTitle>
+          {/* <SubTitle>ЧЕМ ЗАНИМАЕТСЯ НАША КОМПАНИЯ</SubTitle> */}
           <ContentWrapper>
             <ContentText>
               Наша миссия: Мы руководствуемся тремя принципами – честность,

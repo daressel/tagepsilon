@@ -1,8 +1,14 @@
 import { memo, useState } from 'react';
 import NavbarLayout from './navbar.layout';
 
-const Navbar = ({ handleToggleSideMenu, toggleSideMenu, data }) => {
+const Navbar = ({ data }) => {
   const [items, setItems] = useState(data);
+
+  const [toggleSideMenu, setToggleSideMenu] = useState(false);
+
+  const handleToggleSideMenu = () => {
+    setToggleSideMenu((prev) => !prev);
+  };
 
   const handleActiveTab = (tabIndex) => {
     setItems((prevItems) =>

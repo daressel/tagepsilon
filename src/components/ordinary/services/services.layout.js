@@ -7,19 +7,34 @@ import {
   DarkMask,
 } from './services.styled';
 
-const ServicesLayout = ({ items, selectedItem }) => {
+import Product from '../../simple/product/product';
+
+const ServicesLayout = ({ items, selectedItem, handleSelectItem }) => {
+  console.log(selectedItem);
   return (
     <>
       <PageWrapper>
         <ServicesWrapper>
-          {!selectedItem &&
-            items.map((item) => (
-              <ServiceWrapper>
-                <ServiceTitle>{item.title}</ServiceTitle>
-                <DarkMask />
-              </ServiceWrapper>
-            ))}
-          {selectedItem && <ProductWrapper selectedItem={selectedItem} />}
+          {!selectedItem && (
+            <>
+              {items.map((item, index) => (
+                <ServiceWrapper
+                  key={item.altName}
+                  image={item.images[0]}
+                  onClick={() => handleSelectItem(index)}
+                >
+                  <ServiceTitle>{item.title}</ServiceTitle>
+                  <DarkMask />
+                </ServiceWrapper>
+              ))}
+            </>
+          )}
+          {selectedItem && (
+            <Product
+              product={selectedItem}
+              handleSelectItem={handleSelectItem}
+            />
+          )}
         </ServicesWrapper>
       </PageWrapper>
     </>

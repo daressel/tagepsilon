@@ -16,18 +16,19 @@ export const ServiceWrapper = styled.div`
   margin: 20px;
   padding: 10px;
   text-align: center;
-  width: 260px;
-  min-width: 260px;
-  min-height: 280px;
+  width: 250px;
+  min-width: 250px;
+  min-height: 200px;
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-out;
-  background-image: url('/images/logo_without_back.png');
   background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-image: url(${({ image }) =>
+    image ? image : '/images/logo_without_back.png'});
+  /* background-size: contain; */
   :hover {
-    box-shadow: 0 0 5px 2px ${colors.Primary};
+    box-shadow: 0 0 7px 6px ${colors.Primary};
   }
 `;
 
@@ -38,7 +39,7 @@ export const DarkMask = styled.div`
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  opacity: 0.6;
+  opacity: 0.7;
   background-color: ${colors.Black};
 `;
 
