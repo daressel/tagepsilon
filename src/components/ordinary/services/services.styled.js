@@ -16,13 +16,14 @@ export const ServiceWrapper = styled.div`
   margin: 20px;
   padding: 10px;
   text-align: center;
-  width: 250px;
+  width: 350px;
   min-width: 250px;
-  min-height: 200px;
+  min-height: 300px;
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-out;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-position: center;
   background-image: url(${({ image }) =>
     image ? image : '/images/logo_without_back.png'});
