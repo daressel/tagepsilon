@@ -34,6 +34,12 @@ export const SocialWrapper = styled.div`
 export const SocialItem = styled.div`
   display: flex;
   cursor: pointer;
+  background-color: ${colors.Primary};
+  transition: all 0.3s ease-out;
+  border-radius: 20%;
+  :hover {
+    filter: brightness(1.15);
+  }
 `;
 
 export const PhoneWrapper = styled.div`
@@ -49,14 +55,14 @@ export const EmailWrapper = styled.div`
   width: 100%;
 `;
 
-export const Phone = styled.span`
+export const Phone = styled.a`
   font-size: 18px;
   align-self: center;
   margin: 10px;
   cursor: pointer;
 `;
 
-export const Email = styled.span`
+export const Email = styled.a`
   font-size: 18px;
   align-self: center;
   margin: 10px;

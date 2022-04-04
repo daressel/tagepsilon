@@ -27,11 +27,11 @@ export const ContentWrapper = styled.div`
 export const Text = styled.span`
   margin: 10px;
 `;
-export const Email = styled.span`
+export const Email = styled.a`
   margin: 10px;
   cursor: pointer;
 `;
-export const Phone = styled.span`
+export const Phone = styled.a`
   margin: 10px;
   cursor: pointer;
 `;

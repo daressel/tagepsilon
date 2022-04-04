@@ -23,8 +23,10 @@ const ContactsLayout = () => {
             <Text>ИНН 6154155213 </Text>
             <Text>КПП 615401001</Text>
             <Text>ОГРН 1196196022725</Text>
-            <Email>Е-mail: info@tagepsilon.ru</Email>
-            <Phone>Тел. +7 (918) 537-96-12</Phone>
+            <Email href="mailto:info@tagepsilon.ru">
+              Е-mail: info@tagepsilon.ru
+            </Email>
+            <Phone href="tel:+7(918)537-96-12">Тел. +7 (918) 537-96-12</Phone>
           </ContentWrapper>
         </ContactsWrapper>
       </PageWrapper>

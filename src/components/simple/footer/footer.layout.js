@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import Link from 'next/link';
 import {
   FooterWrapper,
   SocialWrapper,
@@ -17,22 +18,34 @@ const FooterLayout = () => {
       <FooterWrapper>
         <Title>Epsilon</Title>
         <EmailWrapper>
-          <Email>info@tagepsilon.ru</Email>
+          <Email href="mailto:info@tagepsilon.ru">info@tagepsilon.ru</Email>
         </EmailWrapper>
         <PhoneWrapper>
-          <Phone>+7 (918) 537-96-12</Phone>
+          <Phone href="tel:+7(918)537-96-12">+7 (918) 537-96-12</Phone>
           {/* <Phone>+7 (918) 537-96-12</Phone> */}
         </PhoneWrapper>
         <SocialWrapper>
-          <SocialItem>
-            <SVGIcon src="icons/vk_icon.svg" />
-          </SocialItem>
-          <SocialItem>
-            <SVGIcon src="icons/telegram_icon.svg" />
-          </SocialItem>
-          <SocialItem>
-            <SVGIcon src="icons/whatsapp_icon.svg" />
-          </SocialItem>
+          <Link href="https://vk.com/tagepsilon" passHref>
+            <a target="_blank">
+              <SocialItem>
+                <SVGIcon src="icons/vk_icon.svg" />
+              </SocialItem>
+            </a>
+          </Link>
+          <Link href="https://t.me/epsilon_group" passHref>
+            <a target="_blank">
+              <SocialItem>
+                <SVGIcon src="icons/telegram_icon.svg" />
+              </SocialItem>
+            </a>
+          </Link>
+          <Link href="https://wa.me/89185379612" passHref>
+            <a target="_blank">
+              <SocialItem>
+                <SVGIcon src="icons/whatsapp_icon.svg" />
+              </SocialItem>
+            </a>
+          </Link>
         </SocialWrapper>
       </FooterWrapper>
     </>
