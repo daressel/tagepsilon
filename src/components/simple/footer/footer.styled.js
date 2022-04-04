@@ -8,24 +8,57 @@ export const FooterWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   bottom: 0px;
+  color: ${colors.White};
   background-color: ${colors.Primary};
   min-height: ${stylesProps.footerHeight};
-  @media ${mediaSize.mobileS.max} {
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  @media ${mediaSize.mobileL.max} {
     flex-direction: column;
-    align-items: center;
   }
 `;
 
 export const Title = styled.div`
   align-self: center;
-  padding: 15px;
-  color: ${colors.White};
+  padding: 10px;
+  font-size: 18px;
 `;
 
 export const SocialWrapper = styled.div`
   display: flex;
+  justify-content: center;
+  width: 100%;
 `;
 
 export const SocialItem = styled.div`
   display: flex;
+  cursor: pointer;
+`;
+
+export const PhoneWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;
+
+export const EmailWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+`;
+
+export const Phone = styled.span`
+  font-size: 18px;
+  align-self: center;
+  margin: 10px;
+  cursor: pointer;
+`;
+
+export const Email = styled.span`
+  font-size: 18px;
+  align-self: center;
+  margin: 10px;
+  cursor: pointer;
 `;
