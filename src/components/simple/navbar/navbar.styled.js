@@ -48,7 +48,10 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
   height: 100%;
   z-index: 100;
   transition: all 0.4s ease-out;
-  ${({ toggleSideMenu }) => (toggleSideMenu ? `left: 0%` : 'left: 100%')};
+  ${({ toggleSideMenu }) =>
+    toggleSideMenu
+      ? `left: 0%; overflow-y: hidden;`
+      : 'left: 100%; overflow-y: auto'};
   @media ${mediaSize.tablet.min} {
     left: 100%;
   }

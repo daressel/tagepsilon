@@ -26,7 +26,7 @@ export const ContentWrapper = styled.div`
   padding: 40px;
   width: 100%;
   text-align: center;
-  min-width: 280px;
+  min-width: 260px;
   margin: 10px 0;
   background-color: ${colors.PrimaryOpacity};
 `;
