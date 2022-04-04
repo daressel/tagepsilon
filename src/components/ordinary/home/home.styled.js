@@ -37,7 +37,7 @@ export const ListWrapper = styled.div`
 
 export const ListItem = styled.div`
   background-color: ${colors.PrimaryOpacity};
-  width: 500px;
+  width: 40%;
   min-width: 260px;
   padding: 30px;
   margin: 10px;
