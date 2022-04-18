@@ -12,8 +12,11 @@ import {
   CloseIcon,
   CallIcon,
 } from './navbar.styled';
-import SvgIcon from '../../ui/svg/svg';
 import Link from 'next/link';
+import Icon from '../../ui/icon/icon';
+
+// const htmlEnd = '.html';
+const htmlEnd = '';
 
 const NavbarLayout = ({
   navbarItems,
@@ -27,7 +30,7 @@ const NavbarLayout = ({
         <LogoWrapper />
         <NavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <Link href={navbarItem.href} passHref key={index}>
+            <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
               <NavbarItem
                 onClick={() => handleActiveTab(index)}
                 active={navbarItem.active}
@@ -37,21 +40,21 @@ const NavbarLayout = ({
             </Link>
           ))}
           <CallIcon>
-            <SvgIcon src="icons/call_icon.svg" />
+            <Icon src="icons/contact_icon.png" />
           </CallIcon>
         </NavbarItemsWrapper>
         <MenuIcon onClick={handleToggleSideMenu}>
-          <SvgIcon src="icons/list_menu_icon.svg" />
+          <Icon src="icons/list_menu_icon.png" />
         </MenuIcon>
       </NavbarWrapper>
       <SideNavbarWrapper toggleSideMenu={toggleSideMenu}>
         <LogoWrapper />
         <CloseIcon onClick={handleToggleSideMenu}>
-          <SvgIcon src="icons/cross_icon.svg" />
+          <Icon src="icons/cross_icon.png" />
         </CloseIcon>
         <SideNavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <Link href={navbarItem.href} passHref key={index}>
+            <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
               <SideNavbarItem
                 onClick={() => handleActiveTab(index)}
                 active={navbarItem.active}

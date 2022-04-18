@@ -15,7 +15,7 @@ const HomeLayout = () => {
       <PageWrapper>
         <HomeWrapper>
           <LogoWrapper />
-          <Title>ООО "ЭПСИЛОН"</Title>
+          <Title>ООО ЭПСИЛОН </Title>
           <SubTitle>предлагает выполнение работ</SubTitle>
           <ListWrapper>
             <ListItem>По проектированию металлоконструкций</ListItem>

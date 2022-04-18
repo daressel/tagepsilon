@@ -13,6 +13,7 @@ export const NavbarWrapper = styled.div`
   color: ${colors.White};
   position: fixed;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export const NavbarItem = styled.div`
@@ -77,7 +78,7 @@ export const LogoWrapper = styled.div`
   min-width: ${stylesProps.logoSize};
   margin-inline: 30px;
   align-self: center;
-  background-image: url('/images/logo_without_back.png');
+  background-image: url('images/logo_without_back.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -85,24 +86,30 @@ export const LogoWrapper = styled.div`
 
 export const MenuIcon = styled.div`
   display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
   @media ${mediaSize.mobileL.max} {
     display: flex;
   }
 `;
 export const CloseIcon = styled.div`
   display: flex;
+  cursor: pointer;
   position: absolute;
-  right: -10px;
-  svg {
-    width: 60px;
-    height: 60px;
-  }
+  right: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
 `;
 
 export const CallIcon = styled.div`
   display: flex;
   justify-content: center;
+  cursor: pointer;
   min-width: 100px;
+  padding: 15px;
   height: ${stylesProps.navBarHeight};
   background-color: ${colors.Primary};
   transition: all 0.3s ease-out;

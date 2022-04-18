@@ -10,7 +10,7 @@ import {
   PhoneWrapper,
   Phone,
 } from './footer.styled';
-import SVGIcon from '../../ui/svg/svg';
+import Icon from '../../ui/icon/icon';
 
 const FooterLayout = () => {
   return (
@@ -28,21 +28,21 @@ const FooterLayout = () => {
           <Link href="https://vk.com/tagepsilon" passHref>
             <a target="_blank">
               <SocialItem>
-                <SVGIcon src="icons/vk_icon.svg" />
+                <Icon src="icons/vk_icon.png" />
               </SocialItem>
             </a>
           </Link>
           <Link href="https://t.me/epsilon_group" passHref>
             <a target="_blank">
               <SocialItem>
-                <SVGIcon src="icons/telegram_icon.svg" />
+                <Icon src="icons/telegram_icon.png" />
               </SocialItem>
             </a>
           </Link>
           <Link href="https://wa.me/89185379612" passHref>
             <a target="_blank">
               <SocialItem>
-                <SVGIcon src="icons/whatsapp_icon.svg" />
+                <Icon src="icons/whatsapp_icon.png" />
               </SocialItem>
             </a>
           </Link>

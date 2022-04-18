@@ -36,6 +36,10 @@ export const SocialItem = styled.div`
   cursor: pointer;
   background-color: ${colors.Primary};
   transition: all 0.3s ease-out;
+  padding: 13px;
+  margin: 3px;
+  width: 60px;
+  height: 60px;
   border-radius: 20%;
   :hover {
     filter: brightness(1.15);

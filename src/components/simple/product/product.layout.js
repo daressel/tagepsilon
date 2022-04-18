@@ -9,7 +9,7 @@ import {
   ArrowImage,
   ActionsWrapper,
 } from './product.styled';
-import SvgIcon from '../../ui/svg/svg';
+import Icon from '../../ui/icon/icon';
 
 const ProductLayout = ({ product, handleSelectItem }) => {
   const [activeImage, setActiveImage] = useState(0);
@@ -34,16 +34,16 @@ const ProductLayout = ({ product, handleSelectItem }) => {
         <HeadWrapper>
           <ProductTitle>{product.title}</ProductTitle>
           <BackIcon onClick={closeProduct}>
-            <SvgIcon src="icons/cross_icon.svg" />
+            <Icon src="icons/cross_icon.png" />
           </BackIcon>
         </HeadWrapper>
         <ProductImage image={product.images[activeImage]} />
         <ActionsWrapper>
           <ArrowImage onClick={() => handleClickArrow(-1)}>
-            <SvgIcon src="icons/prev_arrow_icon.svg" />
+            <Icon src="icons/prev_arrow_icon.png" />
           </ArrowImage>
           <ArrowImage onClick={() => handleClickArrow(1)}>
-            <SvgIcon src="icons/next_arrow_icon.svg" />
+            <Icon src="icons/next_arrow_icon.png" />
           </ArrowImage>
         </ActionsWrapper>
         <ProductDescription>{product.description}</ProductDescription>

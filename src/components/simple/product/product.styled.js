@@ -23,7 +23,7 @@ export const ProductImage = styled.div`
   /* background-position: center; */
 
   background-image: url(${({ image }) =>
-    image ? image : '/images/logo_without_back.png'});
+    image ? image : 'images/logo_without_back.png'});
   /* background-size: auto; */
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -45,10 +45,17 @@ export const ProductDescription = styled.div`
   margin-bottom: 50px;
 `;
 
-export const BackIcon = styled.div``;
+export const BackIcon = styled.div`
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+`;
 
 export const ArrowImage = styled.div`
-  /* pointer-events: none; */
+  cursor: pointer;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
 `;
 
 export const ActionsWrapper = styled.div`
