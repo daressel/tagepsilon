@@ -1,3 +1,4 @@
+import emailjs from '@emailjs/browser';
 import { memo, useState } from 'react';
 import NavbarLayout from './navbar.layout';
 
@@ -20,12 +21,26 @@ const Navbar = ({ data }) => {
     handleToggleSideMenu();
   };
 
+  const handleSendEmail = async () => {
+    await emailjs.send(
+      'service_tb0919p',
+      'template_3ilyo5s',
+      {
+        from: 'from',
+        to: 'to',
+        message: 'message',
+      },
+      'cVjmmU6YUrHBvGCio'
+    );
+  };
+
   return (
     <NavbarLayout
       navbarItems={items}
       handleActiveTab={handleActiveTab}
       handleToggleSideMenu={handleToggleSideMenu}
       toggleSideMenu={toggleSideMenu}
+      handleSendEmail={handleSendEmail}
     />
   );
 };

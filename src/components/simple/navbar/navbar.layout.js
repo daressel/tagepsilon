@@ -23,6 +23,7 @@ const NavbarLayout = ({
   handleActiveTab,
   handleToggleSideMenu,
   toggleSideMenu,
+  handleSendEmail,
 }) => {
   return (
     <>
@@ -39,7 +40,7 @@ const NavbarLayout = ({
               </NavbarItem>
             </Link>
           ))}
-          <CallIcon>
+          <CallIcon onClick={handleSendEmail}>
             <Icon src="icons/contact_icon.png" />
           </CallIcon>
         </NavbarItemsWrapper>
