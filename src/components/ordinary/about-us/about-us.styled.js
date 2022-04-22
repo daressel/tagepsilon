@@ -13,6 +13,7 @@ export const Title = styled.span`
   text-align: center;
   font-size: 32px;
   margin: 20px;
+  min-width: 260px;
 `;
 
 export const SubTitle = styled.span`
