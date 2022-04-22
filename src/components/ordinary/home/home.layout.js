@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import PageWrapper from '../../smart/pageWrapper/pageWrapper';
+import Services from '../../simple/services/services';
 import {
   HomeWrapper,
   ListItem,
@@ -9,15 +10,23 @@ import {
   LogoWrapper,
 } from './home.styled';
 
-const HomeLayout = () => {
+const HomeLayout = ({ selectedItem, handleSelectItem }) => {
   return (
     <>
       <PageWrapper>
         <HomeWrapper>
-          <LogoWrapper />
-          <Title>ООО ЭПСИЛОН </Title>
-          <SubTitle>предлагает выполнение работ</SubTitle>
-          <ListWrapper>
+          {!selectedItem && (
+            <>
+              <LogoWrapper />
+              <Title>ООО ЭПСИЛОН </Title>
+              <SubTitle>предлагает выполнение работ</SubTitle>
+            </>
+          )}
+          <Services
+            selectedItem={selectedItem}
+            handleSelectItem={handleSelectItem}
+          />
+          {/* <ListWrapper>
             <ListItem>По проектированию металлоконструкций</ListItem>
             <ListItem>По изготовлению металлоконструкций</ListItem>
             <ListItem>По поставке металлоконструкций заказчику</ListItem>
@@ -34,7 +43,7 @@ const HomeLayout = () => {
             <ListItem>
               По обслуживанию вентиляционных и дымовых каналов
             </ListItem>
-          </ListWrapper>
+          </ListWrapper> */}
         </HomeWrapper>
       </PageWrapper>
     </>
