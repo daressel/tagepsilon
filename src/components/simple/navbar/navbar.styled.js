@@ -6,7 +6,7 @@ import mediaSize from '../../../core/constants/mediaSize';
 export const NavbarWrapper = styled.div`
   display: flex;
   width: 100%;
-  z-index: 90;
+  z-index: 10;
   height: ${stylesProps.navBarHeight};
   top: 0;
   background-color: ${colors.Primary};
@@ -47,7 +47,7 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
   flex-direction: column;
   justify-content: unset;
   height: 100%;
-  z-index: 100;
+  z-index: 15;
   transition: all 0.4s ease-out;
   ${({ toggleSideMenu }) =>
     toggleSideMenu
