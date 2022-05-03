@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import colors from '../../../core/constants/colors';
 
 const getStatusColor = (props) => {
-  console.log(props);
   const {
     statusFlags: { touched, error },
     value,

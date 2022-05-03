@@ -11,7 +11,6 @@ export const FormikField = ({ name, displayName, type, withError }) => {
   return (
     <Field name={name}>
       {({ field, meta: { touched, error } }) => {
-        console.log(touched, 'touched');
         return (
           <InputWrapper>
             {displayName && <InputCustomLabed>{displayName}</InputCustomLabed>}

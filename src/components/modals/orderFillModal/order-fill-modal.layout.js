@@ -6,7 +6,6 @@ import { FormikField } from '../../ui/input/input';
 import { ButtonPrimary } from '../../ui/button/button.styled';
 
 const OrderFillModalLayout = ({ formik }) => {
-  console.log(formik);
   return (
     <FormikProvider value={formik}>
       <Title>Оставить заявку</Title>

@@ -10,7 +10,6 @@ const Navbar = ({ data }) => {
   const [toggleSideMenu, setToggleSideMenu] = useState(false);
 
   const handleToggleSideMenu = () => {
-    console.log();
     toggleSideMenu
       ? (document.body.style.overflow = 'unset')
       : (document.body.style.overflow = 'hidden');
