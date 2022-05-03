@@ -15,10 +15,7 @@ const HomeLayout = ({ selectedItem, handleSelectItem }) => {
               <SubTitle>предлагает выполнение работ</SubTitle>
             </>
           )}
-          <Services
-            selectedItem={selectedItem}
-            handleSelectItem={handleSelectItem}
-          />
+          <Services selectedItem={selectedItem} handleSelectItem={handleSelectItem} />
         </HomeWrapper>
       </PageWrapper>
     </>
