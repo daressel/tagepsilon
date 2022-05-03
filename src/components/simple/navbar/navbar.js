@@ -26,8 +26,8 @@ const Navbar = ({ data }) => {
     document.body.style.overflow = 'unset';
   };
 
-  const handleOpenModal = async () => {
-    setModal('orderFillModal');
+  const handleOpenModal = async (name) => {
+    setModal(name);
   };
 
   return (
@@ -36,7 +36,7 @@ const Navbar = ({ data }) => {
       handleActiveTab={handleActiveTab}
       handleToggleSideMenu={handleToggleSideMenu}
       toggleSideMenu={toggleSideMenu}
-      handleSendEmail={handleOpenModal}
+      handleOpenModal={handleOpenModal}
     />
   );
 };

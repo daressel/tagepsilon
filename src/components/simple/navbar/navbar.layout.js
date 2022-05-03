@@ -23,7 +23,7 @@ const NavbarLayout = ({
   handleActiveTab,
   handleToggleSideMenu,
   toggleSideMenu,
-  handleSendEmail,
+  handleOpenModal,
 }) => {
   return (
     <>
@@ -32,15 +32,15 @@ const NavbarLayout = ({
         <NavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
             <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
-              <NavbarItem
-                onClick={() => handleActiveTab(index)}
-                active={navbarItem.active}
-              >
+              <NavbarItem onClick={() => handleActiveTab(index)} active={navbarItem.active}>
                 <Title>{navbarItem.title}</Title>
               </NavbarItem>
             </Link>
           ))}
-          <CallIcon onClick={handleSendEmail}>
+          <NavbarItem onClick={() => handleOpenModal('questionnaireModal')}>
+            <Title>Пройти опрос</Title>
+          </NavbarItem>
+          <CallIcon onClick={() => handleOpenModal('requestModal')}>
             <Icon src="icons/contact_icon.png" />
           </CallIcon>
         </NavbarItemsWrapper>
@@ -56,15 +56,15 @@ const NavbarLayout = ({
         <SideNavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
             <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
-              <SideNavbarItem
-                onClick={() => handleActiveTab(index)}
-                active={navbarItem.active}
-              >
+              <SideNavbarItem onClick={() => handleActiveTab(index)} active={navbarItem.active}>
                 <Title>{navbarItem.title}</Title>
               </SideNavbarItem>
             </Link>
           ))}
-          <CallIcon onClick={handleSendEmail}>
+          <SideNavbarItem onClick={() => handleOpenModal('questionnaireModal')}>
+            <Title>Пройти опрос</Title>
+          </SideNavbarItem>
+          <CallIcon onClick={() => handleOpenModal('requestModal')}>
             <Icon src="icons/contact_icon.png" />
           </CallIcon>
         </SideNavbarItemsWrapper>

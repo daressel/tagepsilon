@@ -24,6 +24,6 @@ export const ButtonPrimary = styled(Button)`
   &:hover {
     color: ${colors.White};
     background-color: ${colors.PrimaryOpacity};
-    border-color: ${colors.White};
+    border-color: ${colors.PrimaryBright};
   }
 `;

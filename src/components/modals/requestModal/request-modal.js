@@ -1,11 +1,11 @@
 import { memo } from 'react';
-import OrderFillModalLayout from './order-fill-modal.layout';
+import RequestModalLayout from './request-modal.layout';
 import * as yup from 'yup';
 import { useFormik } from 'formik';
 import { regExp } from '../../../core/constants/regexp';
 import { sendMail } from '../../../core/mailer/mailer';
 
-const OrderFillModal = () => {
+const RequestModal = () => {
   const validationSchema = yup.object().shape({
     email: yup.string().required('Заполните почту').email('Некорректная почта'),
     phone: yup.string().required('Заполните телефон').matches(regExp.isPhone, 'Некорректный номер'),
@@ -31,9 +31,9 @@ const OrderFillModal = () => {
 
   return (
     <>
-      <OrderFillModalLayout formik={formik} />
+      <RequestModalLayout formik={formik} />
     </>
   );
 };
 
-export default memo(OrderFillModal);
+export default memo(RequestModal);

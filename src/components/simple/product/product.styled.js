@@ -9,22 +9,16 @@ export const ProductWrapper = styled.div`
 export const ProductTitle = styled.div`
   color: ${colors.White};
   align-self: center;
-  font-size: 32px;
-  margin-bottom: 100px;
+  font-size: min(7vw, 32px);
+  margin-bottom: 6vh;
 `;
 export const ProductImage = styled.div`
   display: flex;
   align-self: center;
-  /* position: relative; */
-  min-width: 280px;
-  width: 500px;
-  height: 300px;
+  width: min(90vw, 350px);
+  height: min(90vw, 350px);
   transition: all 0.2s ease-out;
-  /* background-position: center; */
-
-  background-image: url(${({ image }) =>
-    image ? image : 'images/logo_without_back.png'});
-  /* background-size: auto; */
+  background-image: url(${({ image }) => (image ? image : 'images/logo_without_back.png')});
   background-repeat: no-repeat;
   background-size: 100% 100%;
 `;
@@ -37,10 +31,9 @@ export const ProductDescription = styled.div`
   color: ${colors.White};
   border-radius: 10px;
   padding: 40px;
-  width: 100%;
+  width: 90vw;
+  font-size: min(6vw, 20px);
   text-align: center;
-  min-width: 280px;
-  margin: 10px 0;
   background-color: ${colors.PrimaryOpacity};
   margin-bottom: 50px;
 `;

@@ -1,5 +1,7 @@
-import OrderFillModal from './orderFillModal/order-fill-modal';
+import RequestModal from './requestModal/request-modal';
+import QuestionnaireModal from './questionnaireModal/questionnaire-modal';
 
 export const modals = {
-  orderFillModal: <OrderFillModal />,
+  requestModal: <RequestModal />,
+  questionnaireModal: <QuestionnaireModal />,
 };

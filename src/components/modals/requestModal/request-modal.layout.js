@@ -1,11 +1,11 @@
 import { memo } from 'react';
 import { FormWrapper } from '../../ui/input/input.styled';
-import { Title } from './order-fill-modal.styled';
+import { Title } from './request-modal.styled';
 import { FormikProvider } from 'formik';
 import { FormikField } from '../../ui/input/input';
 import { ButtonPrimary } from '../../ui/button/button.styled';
 
-const OrderFillModalLayout = ({ formik }) => {
+const RequestModalLayout = ({ formik }) => {
   return (
     <FormikProvider value={formik}>
       <Title>Оставить заявку</Title>
@@ -29,4 +29,4 @@ const OrderFillModalLayout = ({ formik }) => {
   );
 };
 
-export default memo(OrderFillModalLayout);
+export default memo(RequestModalLayout);

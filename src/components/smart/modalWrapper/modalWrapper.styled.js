@@ -3,9 +3,9 @@ import colors from '../../../core/constants/colors';
 
 export const ModalContainer = styled.div`
   width: min(100vw, 400px);
-  min-height: 220px;
+  min-height: 150px;
   min-width: 215px;
-  margin-top: 5%;
+  margin-top: 8%;
   padding: 30px;
   color: ${colors.White};
   background: ${colors.Primary};
@@ -35,8 +35,8 @@ export const ModalBackground = styled.div`
 
 export const CloseModalButton = styled.div`
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 2px;
+  right: 2px;
   width: 55px;
   height: 55px;
 `;

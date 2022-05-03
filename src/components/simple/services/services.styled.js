@@ -5,7 +5,6 @@ export const ServicesWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 40px;
 `;
 
 export const ServiceWrapper = styled.div`
@@ -13,21 +12,18 @@ export const ServiceWrapper = styled.div`
   position: relative;
   justify-content: center;
   align-items: flex-end;
-  margin: 20px;
+  margin: 20px 10px;
   padding: 10px;
   text-align: center;
-  width: 350px;
-  min-width: 250px;
-  min-height: 300px;
+  width: min(60vw, 350px);
+  height: min(60vw, 350px);
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-out;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  background-image: url(${({ image }) =>
-    image ? image : 'images/logo_without_back.png'});
-  /* background-size: contain; */
+  background-image: url(${({ image }) => (image ? image : 'images/logo_without_back.png')});
   :hover {
     box-shadow: 0 0 7px 6px ${colors.Primary};
   }
@@ -46,5 +42,6 @@ export const DarkMask = styled.div`
 
 export const ServiceTitle = styled.div`
   color: ${colors.White};
+  font-size: min(5vw, 25px);
   z-index: 5;
 `;
