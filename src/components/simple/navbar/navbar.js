@@ -27,18 +27,8 @@ const Navbar = ({ data }) => {
     document.body.style.overflow = 'unset';
   };
 
-  const handleSendEmail = async () => {
+  const handleOpenModal = async () => {
     setModal('orderFillModal');
-    // await emailjs.send(
-    //   'service_tb0919p',
-    //   'template_3ilyo5s',
-    //   {
-    //     from: 'from',
-    //     to: 'to',
-    //     message: 'message',
-    //   },
-    //   'cVjmmU6YUrHBvGCio'
-    // );
   };
 
   return (
@@ -47,7 +37,7 @@ const Navbar = ({ data }) => {
       handleActiveTab={handleActiveTab}
       handleToggleSideMenu={handleToggleSideMenu}
       toggleSideMenu={toggleSideMenu}
-      handleSendEmail={handleSendEmail}
+      handleSendEmail={handleOpenModal}
     />
   );
 };

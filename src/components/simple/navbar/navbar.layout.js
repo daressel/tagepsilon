@@ -64,6 +64,9 @@ const NavbarLayout = ({
               </SideNavbarItem>
             </Link>
           ))}
+          <CallIcon onClick={handleSendEmail}>
+            <Icon src="icons/contact_icon.png" />
+          </CallIcon>
         </SideNavbarItemsWrapper>
       </SideNavbarWrapper>
     </>

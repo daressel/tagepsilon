@@ -6,6 +6,7 @@ export const IconWrapper = styled.div`
   min-width: 25px;
   width: 100%;
   height: 100%;
+  cursor: pointer;
   background-image: url(${({ image }) =>
     image ? image : 'images/logo_without_back.png'});
   background-repeat: no-repeat;

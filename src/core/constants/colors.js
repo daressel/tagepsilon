@@ -5,4 +5,6 @@ export default {
   Dark: '#615e5b',
   Secondary: '#b8bab6',
   Black: '#000',
+  Error: '#ff00009c',
+  Success: '#21ff0075',
 };
