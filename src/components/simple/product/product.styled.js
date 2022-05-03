@@ -35,7 +35,7 @@ export const ProductDescription = styled.div`
   font-size: min(6vw, 20px);
   text-align: center;
   background-color: ${colors.PrimaryOpacity};
-  margin-bottom: 50px;
+  margin: 50px 0;
 `;
 
 export const BackIcon = styled.div`

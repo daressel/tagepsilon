@@ -15,8 +15,8 @@ export const ServiceWrapper = styled.div`
   margin: 20px 10px;
   padding: 10px;
   text-align: center;
-  width: min(60vw, 350px);
-  height: min(60vw, 350px);
+  width: min(60vw, 320px);
+  height: min(60vw, 320px);
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-out;
@@ -42,6 +42,6 @@ export const DarkMask = styled.div`
 
 export const ServiceTitle = styled.div`
   color: ${colors.White};
-  font-size: min(5vw, 25px);
+  font-size: min(5vw, 22px);
   z-index: 5;
 `;
