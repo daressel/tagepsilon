@@ -15,7 +15,6 @@ const QuestionnaireModal = () => {
         )
       );
     setAnswers(() => filteredQuestionnaire || []);
-    console.log(filteredQuestionnaire);
   }, [category]);
 
   const clickAnswer = (answer) => {
@@ -23,13 +22,12 @@ const QuestionnaireModal = () => {
   };
 
   const clickBack = () => {
-    console.log(category);
     const updateCategory = questionnaire[category]?.from || 'main';
     setCategory(updateCategory);
   };
 
   const sendRequest = () => {
-    console.log(questionnaire[category].displayName);
+    // console.log(questionnaire[category].displayName);
   };
 
   return (

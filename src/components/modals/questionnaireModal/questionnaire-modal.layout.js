@@ -15,7 +15,6 @@ const QuestionnaireModalLayout = ({
   sendRequest,
   selectedAnswer,
 }) => {
-  console.log(answers, 'answers');
   return (
     <>
       <QuestionnaireWrapper>

@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo, useState, useEffect } from 'react';
 import {
   ProductWrapper,
   ProductTitle,
@@ -11,23 +11,7 @@ import {
 } from './product.styled';
 import Icon from '../../ui/icon/icon';
 
-const ProductLayout = ({ product, handleSelectItem }) => {
-  const [activeImage, setActiveImage] = useState(0);
-
-  const closeProduct = () => {
-    handleSelectItem(-1);
-  };
-
-  const handleClickArrow = (side) => {
-    if (
-      (activeImage === 0 && side < 0) ||
-      (activeImage === product.images.length - 1 && side > 0)
-    )
-      return;
-
-    setActiveImage((prev) => prev + side);
-  };
-
+const ProductLayout = ({ product, activeImage, handleClickArrow, closeProduct }) => {
   return (
     <>
       <ProductWrapper>
