@@ -8,12 +8,12 @@ export const ModalContainer = styled.div`
   margin-top: 8%;
   padding: 30px;
   color: ${colors.White};
-  background: ${colors.Primary};
+  background: ${colors.PrimaryOpacity};
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   position: relative;
   animation: animate 0.3s;
 `;

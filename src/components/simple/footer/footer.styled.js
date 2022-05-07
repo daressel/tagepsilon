@@ -42,7 +42,7 @@ export const SocialItem = styled.div`
   height: 60px;
   border-radius: 20%;
   :hover {
-    filter: brightness(1.15);
+    background-color: ${colors.PrimaryHover};
   }
 `;
 
@@ -64,6 +64,12 @@ export const Phone = styled.a`
   align-self: center;
   margin: 10px;
   cursor: pointer;
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+  :hover {
+    background-color: ${colors.PrimaryHover};
+  }
 `;
 
 export const Email = styled.a`
@@ -71,4 +77,10 @@ export const Email = styled.a`
   align-self: center;
   margin: 10px;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+  padding: 10px;
+  :hover {
+    background-color: ${colors.PrimaryHover};
+  }
 `;

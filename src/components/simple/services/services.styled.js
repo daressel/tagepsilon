@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { keyframes } from 'styled-components';
 import colors from '../../../core/constants/colors';
 
 export const ServicesWrapper = styled.div`

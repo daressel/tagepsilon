@@ -26,12 +26,12 @@ export const NavbarItem = styled.div`
   width: 100%;
   transition: all 0.3s ease-out;
   :hover {
-    filter: brightness(1.15);
+    background-color: ${colors.PrimaryHover};
   }
   ${({ active }) =>
     active &&
     `
-    filter: brightness(1.15);
+    background-color: ${colors.PrimaryHover};
   `};
 `;
 
@@ -50,9 +50,7 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
   z-index: 15;
   transition: all 0.4s ease-out;
   ${({ toggleSideMenu }) =>
-    toggleSideMenu
-      ? `left: 0%; overflow-y: hidden;`
-      : 'left: 100%; overflow-y: auto'};
+    toggleSideMenu ? `left: 0%; overflow-y: hidden;` : 'left: 100%; overflow-y: auto'};
   @media ${mediaSize.tablet.min} {
     left: 100%;
   }
@@ -75,6 +73,7 @@ export const Title = styled.span`
 
 export const LogoWrapper = styled.div`
   height: ${stylesProps.logoSize};
+  cursor: pointer;
   min-width: ${stylesProps.logoSize};
   margin-inline: 30px;
   align-self: center;
@@ -114,6 +113,6 @@ export const CallIcon = styled.div`
   background-color: ${colors.Primary};
   transition: all 0.3s ease-out;
   :hover {
-    filter: brightness(1.15);
+    background-color: ${colors.PrimaryHover};
   }
 `;

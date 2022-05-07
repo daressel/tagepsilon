@@ -23,7 +23,7 @@ export const SubTitle = styled.span`
 
 export const ContentWrapper = styled.div`
   /* border: 1px solid ${colors.Primary}; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 40px;
   width: 100%;
   text-align: center;

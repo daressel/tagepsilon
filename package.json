@@ -2,9 +2,10 @@
   "name": "tagepsilon",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gitname.github.io/tagepsilon",
+  "homepage": "/",
   "scripts": {
     "dev": "next dev",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "deploy": "next build && next export && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages"
