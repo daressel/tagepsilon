@@ -1,9 +1,12 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  Primary: '#4bb59e',
+  Primary: '#000',
+  // Primary: '#4bb59e',
   PrimaryBright: '#00ffc8',
-  PrimaryOpacity: '#4bb59e90',
+  PrimaryOpacity: '#111',
+  PrimaryHover: '#333',
   White: '#fff',
-  Dark: '#615e5b',
+  Dark: '#222',
   Secondary: '#b8bab6',
   Black: '#000',
   Error: '#ff00009c',

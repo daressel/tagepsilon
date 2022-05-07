@@ -31,18 +31,18 @@ export const questionnaire = {
     from: 'metal',
     displayName: 'Вспомогательные детали',
   },
-  playground: {
-    from: 'residential',
-    displayName: 'Игровые площадки',
-  },
+  // playground: {
+  //   from: 'residential',
+  //   displayName: 'Игровые площадки',
+  // },
   overhaul: {
     from: 'residential',
-    displayName: 'Капитальный ремонт',
+    displayName: 'Капитальный ремонт многоквартирных домов',
   },
-  sieves: {
-    from: 'details',
-    displayName: 'Сита',
-  },
+  // sieves: {
+  //   from: 'details',
+  //   displayName: 'Сита',
+  // },
   metalProcces: {
     from: 'details',
     displayName: 'Обработка металла',
@@ -75,10 +75,10 @@ export const questionnaire = {
     from: 'capacity',
     displayName: 'Силосы для цемента',
   },
-  bunkers: {
-    from: 'capacity',
-    displayName: 'Бункеры, контейнеры для ТБО',
-  },
+  // bunkers: {
+  //   from: 'capacity',
+  //   displayName: 'Бункеры, контейнеры для ТБО',
+  // },
   waterTowers: {
     from: 'structures',
     displayName: 'Водонапорные башни',

@@ -17,12 +17,8 @@ const Navbar = ({ data }) => {
   };
 
   const handleActiveTab = (tabIndex) => {
-    setItems((prevItems) =>
-      prevItems.map((item, index) => {
-        item.active = index === tabIndex;
-        return item;
-      })
-    );
+    localStorage.setItem('activeNav', tabIndex);
+    setToggleSideMenu(false);
     document.body.style.overflow = 'unset';
   };
 

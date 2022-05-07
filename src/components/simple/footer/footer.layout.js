@@ -39,7 +39,7 @@ const FooterLayout = () => {
               </SocialItem>
             </a>
           </Link>
-          <Link href="https://wa.me/89185379612" passHref>
+          <Link href="https://wa.me/+79185379612" passHref>
             <a target="_blank">
               <SocialItem>
                 <Icon src="icons/whatsapp_icon.png" />
