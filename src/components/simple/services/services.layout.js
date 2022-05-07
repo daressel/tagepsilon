@@ -1,10 +1,5 @@
 import { memo } from 'react';
-import {
-  ServiceWrapper,
-  ServicesWrapper,
-  ServiceTitle,
-  DarkMask,
-} from './services.styled';
+import { ServiceWrapper, ServicesWrapper, ServiceTitle, DarkMask } from './services.styled';
 
 import Product from '../product/product';
 
@@ -18,7 +13,7 @@ const ServicesLayout = ({ items, selectedItem, handleSelectItem }) => {
               <ServiceWrapper
                 key={item.altName}
                 image={item.images[0]}
-                onClick={() => handleSelectItem(index)}
+                onClick={() => handleSelectItem(item.altName)}
               >
                 <ServiceTitle>{item.title}</ServiceTitle>
                 <DarkMask />
@@ -26,9 +21,7 @@ const ServicesLayout = ({ items, selectedItem, handleSelectItem }) => {
             ))}
           </>
         )}
-        {selectedItem && (
-          <Product product={selectedItem} handleSelectItem={handleSelectItem} />
-        )}
+        {selectedItem && <Product product={selectedItem} handleSelectItem={handleSelectItem} />}
       </ServicesWrapper>
     </>
   );
