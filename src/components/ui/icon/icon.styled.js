@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import colors from '../../../core/constants/colors';
 
 export const IconWrapper = styled.div`
-  min-height: 5vw;
-  min-width: 5vw;
+  height: min(7vw, 55px);
+  width: min(7vw, 55px);
   width: 100%;
   height: 100%;
   cursor: pointer;

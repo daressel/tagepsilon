@@ -36,6 +36,7 @@ export const ProductDescription = styled.div`
   text-align: center;
   background-color: ${colors.PrimaryOpacity};
   margin: 50px 0;
+  align-self: center;
 `;
 
 export const BackIcon = styled.div`
