@@ -6,6 +6,7 @@ import services from '../../src/core/config/services';
 const ServicePage = () => {
   const router = useRouter();
   const { name } = router.query;
+  // const service = services.find((service) => service.altName === name?.split('.')[0]);
   const service = services.find((service) => service.altName === name);
 
   return <>{name && <Service service={service}></Service>}</>;

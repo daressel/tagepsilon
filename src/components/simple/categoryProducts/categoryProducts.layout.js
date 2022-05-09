@@ -37,6 +37,9 @@ const positions = [
   },
 ];
 
+// const htmlEnd = '.html';
+const htmlEnd = '';
+
 const CategoryProductsLayout = ({
   categories = [],
   products = [],
@@ -66,7 +69,7 @@ const CategoryProductsLayout = ({
           </MainCircle>
           {products.map((product, index) => {
             return (
-              <Link href={`service/${product.altName}`} passHref key={index}>
+              <Link href={`service/${product.altName}${htmlEnd}`} passHref key={index}>
                 <ProductCircle left={positions[index].left} bottom={positions[index].bottom}>
                   {product.shortName}
                 </ProductCircle>
