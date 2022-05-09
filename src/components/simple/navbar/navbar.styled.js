@@ -120,16 +120,3 @@ export const CallIcon = styled.div`
     background-color: ${colors.PrimaryHover};
   }
 `;
-
-export const ScrollToTop = styled.div`
-  width: min(10vw, 100px);
-  height: min(10vw, 100px);
-  background-color: ${colors.Primary};
-  box-shadow: 0 0 1px 2px ${colors.PrimaryBright};
-  :hover {
-    z-index: 10;
-    box-shadow: 0 0 4px 5px ${colors.PrimaryBright};
-    width: min(12vw, 120px);
-    height: min(12vw, 120px);
-  }
-`;

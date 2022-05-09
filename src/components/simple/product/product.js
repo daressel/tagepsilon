@@ -4,7 +4,6 @@ import ProductLayout from './product.layout';
 let interval = setInterval(() => {}, 1000);
 
 const Product = ({ product, handleSelectItem }) => {
-  console.log(product);
   const [activeImage, setActiveImage] = useState(0);
   const [blockInterval, setBlockInterval] = useState(false);
 
