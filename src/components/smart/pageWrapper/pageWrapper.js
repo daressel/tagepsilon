@@ -15,6 +15,7 @@ const ContentWrapper = ({ children }) => {
   useEffect(() => {
     setReady(true);
     window.addEventListener('scroll', handleScroll, true);
+    return window.removeEventListener('scroll', handleScroll, true);
   }, []);
 
   const handleScroll = () => {

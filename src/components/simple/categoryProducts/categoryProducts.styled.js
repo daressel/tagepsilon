@@ -17,11 +17,17 @@ import colors from '../../../core/constants/colors';
 //   }
 // `;
 
+export const CategoryContentWrapper = styled.div`
+  margin-top: 40px;
+  width: 100%;
+`;
+
 export const CategoryProductsWrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
+
   background-color: ${colors.White};
 `;
 
@@ -39,7 +45,7 @@ export const MainCircle = styled.div`
 `;
 
 export const ImageMain = styled.div`
-  background-image: url(${({ image }) => image});
+  background-image: url(${({ image }) => `/${image}`});
   width: 70%;
   height: 70%;
   background-repeat: no-repeat;

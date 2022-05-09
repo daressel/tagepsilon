@@ -5,16 +5,12 @@ import services from '../../../core/config/services';
 const categories = services.filter((service) => service.type === 'category');
 const products = services.filter((service) => service.type !== 'category');
 
-const CategoryProducts = ({ handleSelectItem }) => {
+const CategoryProducts = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].altName);
 
   const selectCategory = (name) => {
     setSelectedCategory(name);
     document.getElementById('category-navbar').scrollIntoView();
-  };
-
-  const handleClickProduct = (name) => {
-    console.log(123);
   };
 
   return (
@@ -24,8 +20,6 @@ const CategoryProducts = ({ handleSelectItem }) => {
         products={products.filter((product) => product.from === selectedCategory)}
         selectCategory={selectCategory}
         selectedCategory={selectedCategory}
-        handleClickProduct={handleClickProduct}
-        handleSelectItem={handleSelectItem}
       />
     </>
   );

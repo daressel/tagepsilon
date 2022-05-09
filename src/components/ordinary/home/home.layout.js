@@ -14,10 +14,10 @@ const HomeLayout = ({ selectedItem, handleSelectItem }) => {
           {!selectedItem && (
             <>
               <LogoWrapper />
+              <AboutUs />
               <Title>ООО ЭПСИЛОН </Title>
               <SubTitle>предлагает выполнение работ</SubTitle>
               <CategoryProducts handleSelectItem={handleSelectItem} />
-              <AboutUs />
             </>
           )}
           {selectedItem && <Product product={selectedItem} handleSelectItem={handleSelectItem} />}

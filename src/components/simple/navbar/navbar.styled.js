@@ -78,7 +78,7 @@ export const LogoWrapper = styled.div`
   min-width: ${stylesProps.logoSize};
   margin-inline: 30px;
   align-self: center;
-  background-image: url('images/logo_without_back.png');
+  background-image: url('/images/logo_without_back.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

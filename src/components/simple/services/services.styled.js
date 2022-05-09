@@ -24,7 +24,7 @@ export const ServiceWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  background-image: url(${({ image }) => (image ? image : 'images/logo_without_back.png')});
+  background-image: url(${({ image }) => (image ? `/${image}` : '/images/logo_without_back.png')});
   :hover {
     box-shadow: 0 0 7px 6px ${colors.Primary};
   }

@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import Link from 'next/link';
 import {
   CategoryProductsWrapper,
   MainCircle,
@@ -6,6 +7,7 @@ import {
   CategoryNavbar,
   NavbarItem,
   ImageMain,
+  CategoryContentWrapper,
 } from './categoryProducts.styled';
 
 const positions = [
@@ -38,44 +40,41 @@ const positions = [
 const CategoryProductsLayout = ({
   categories = [],
   products = [],
-  handleClickProduct,
   selectCategory,
   selectedCategory = 0,
-  handleSelectItem,
 }) => {
   return (
     <>
-      <CategoryNavbar id="category-navbar">
-        {categories.map((category, index, allCategories) => {
-          return (
-            <NavbarItem
-              onClick={() => selectCategory(category.altName)}
-              active={selectedCategory === category.altName}
-              width={`${100 / allCategories.length}%`}
-              key={index}
-            >
-              {category.title}
-            </NavbarItem>
-          );
-        })}
-      </CategoryNavbar>
-      <CategoryProductsWrapper>
-        <MainCircle>
-          <ImageMain image={`images/categories/${selectedCategory}.jpg`} />
-        </MainCircle>
-        {products.map((product, index) => {
-          return (
-            <ProductCircle
-              onClick={() => handleSelectItem(product.altName)}
-              left={positions[index].left}
-              bottom={positions[index].bottom}
-              key={index}
-            >
-              {product.shortName}
-            </ProductCircle>
-          );
-        })}
-      </CategoryProductsWrapper>
+      <CategoryContentWrapper>
+        <CategoryNavbar id="category-navbar">
+          {categories.map((category, index, allCategories) => {
+            return (
+              <NavbarItem
+                onClick={() => selectCategory(category.altName)}
+                active={selectedCategory === category.altName}
+                width={`${100 / allCategories.length}%`}
+                key={index}
+              >
+                {category.title}
+              </NavbarItem>
+            );
+          })}
+        </CategoryNavbar>
+        <CategoryProductsWrapper>
+          <MainCircle>
+            <ImageMain image={`images/categories/${selectedCategory}.jpg`} />
+          </MainCircle>
+          {products.map((product, index) => {
+            return (
+              <Link href={`service/${product.altName}`} passHref key={index}>
+                <ProductCircle left={positions[index].left} bottom={positions[index].bottom}>
+                  {product.shortName}
+                </ProductCircle>
+              </Link>
+            );
+          })}
+        </CategoryProductsWrapper>
+      </CategoryContentWrapper>
     </>
   );
 };

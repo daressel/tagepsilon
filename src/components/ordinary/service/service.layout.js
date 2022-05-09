@@ -1,29 +1,32 @@
 import { memo, useState, useEffect } from 'react';
 import {
-  ProductWrapper,
-  ProductTitle,
-  ProductImage,
-  ProductDescription,
+  ServiceWrapper,
+  ServiceTitle,
+  ServiceImage,
+  ServiceDescription,
   BackIcon,
   HeadWrapper,
   ArrowImage,
   ActionsWrapper,
-} from './product.styled';
+} from './service.styled';
+import Link from 'next/link';
 import Icon from '../../ui/icon/icon';
 import PageWrapper from '../../smart/pageWrapper/pageWrapper';
 
-const ProductLayout = ({ product, activeImage, handleClickArrow, closeProduct }) => {
+const ServiceLayout = ({ service, activeImage, handleClickArrow }) => {
   return (
     <>
       <PageWrapper>
-        <ProductWrapper>
+        <ServiceWrapper>
           <HeadWrapper>
-            <ProductTitle>{product.title}</ProductTitle>
-            <BackIcon onClick={closeProduct}>
-              <Icon src="icons/cross_icon.png" />
-            </BackIcon>
+            <ServiceTitle>{service.title}</ServiceTitle>
+            <Link href="/" passHref>
+              <BackIcon>
+                <Icon src="icons/cross_icon.png" />
+              </BackIcon>
+            </Link>
           </HeadWrapper>
-          <ProductImage image={product.images[activeImage]} />
+          <ServiceImage image={service.images[activeImage]} />
           <ActionsWrapper>
             <ArrowImage onClick={() => handleClickArrow(-1)}>
               <Icon src="icons/prev_arrow_icon.png" />
@@ -32,11 +35,11 @@ const ProductLayout = ({ product, activeImage, handleClickArrow, closeProduct })
               <Icon src="icons/next_arrow_icon.png" />
             </ArrowImage>
           </ActionsWrapper>
-          <ProductDescription>{product.description}</ProductDescription>
-        </ProductWrapper>
+          <ServiceDescription>{service.description}</ServiceDescription>
+        </ServiceWrapper>
       </PageWrapper>
     </>
   );
 };
 
-export default memo(ProductLayout);
+export default memo(ServiceLayout);

@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import colors from '../../../core/constants/colors';
 
-export const ProductWrapper = styled.div`
+export const ServiceWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
 
-export const ProductTitle = styled.div`
+export const ServiceTitle = styled.div`
   color: ${colors.White};
   align-self: center;
   font-size: min(7vw, 32px);
   margin-bottom: 6vh;
 `;
-export const ProductImage = styled.div`
+export const ServiceImage = styled.div`
   display: flex;
   align-self: center;
   width: min(90vw, 350px);
@@ -28,7 +28,7 @@ export const HeadWrapper = styled.div`
   justify-content: space-between;
   margin-left: 5vw;
 `;
-export const ProductDescription = styled.div`
+export const ServiceDescription = styled.div`
   color: ${colors.White};
   /* border-radius: 10px; */
   padding: 40px;

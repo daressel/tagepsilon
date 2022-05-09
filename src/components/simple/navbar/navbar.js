@@ -1,4 +1,3 @@
-import emailjs from '@emailjs/browser';
 import { memo, useState } from 'react';
 import { useModalContext } from '../../../core/context/modalContext';
 import NavbarLayout from './navbar.layout';
