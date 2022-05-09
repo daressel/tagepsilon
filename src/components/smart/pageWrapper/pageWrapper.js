@@ -12,10 +12,14 @@ const ContentWrapper = ({ children }) => {
     window.scrollTo(0, 0);
   };
 
+  const removeScrollListener = () => {
+    window.removeEventListener('scroll', handleScroll, true);
+  };
+
   useEffect(() => {
     setReady(true);
     window.addEventListener('scroll', handleScroll, true);
-    return window.removeEventListener('scroll', handleScroll, true);
+    return removeScrollListener;
   }, []);
 
   const handleScroll = () => {
