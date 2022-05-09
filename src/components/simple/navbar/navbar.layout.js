@@ -60,6 +60,7 @@ const NavbarLayout = ({
               </NavbarItem>
               <CallIcon onClick={() => handleOpenModal('requestModal')}>
                 <Icon src="icons/contact_icon.png" />
+                Оставить заявку
               </CallIcon>
             </NavbarItemsWrapper>
             <MenuIcon onClick={handleToggleSideMenu}>
@@ -91,6 +92,7 @@ const NavbarLayout = ({
               </SideNavbarItem>
               <CallIcon onClick={() => handleOpenModal('requestModal')}>
                 <Icon src="icons/contact_icon.png" />
+                Оставить заявку
               </CallIcon>
             </SideNavbarItemsWrapper>
           </SideNavbarWrapper>

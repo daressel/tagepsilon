@@ -11,7 +11,7 @@ export const NavbarWrapper = styled.div`
   top: 0;
   background-color: ${colors.Primary};
   color: ${colors.White};
-  position: fixed;
+  /* position: fixed; */
   justify-content: space-between;
   align-items: center;
 `;
@@ -48,6 +48,7 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
   justify-content: unset;
   height: 100%;
   z-index: 15;
+  position: fixed;
   transition: all 0.4s ease-out;
   ${({ toggleSideMenu }) =>
     toggleSideMenu ? `left: 0%; overflow-y: hidden;` : 'left: 100%; overflow-y: auto'};
@@ -105,8 +106,11 @@ export const CloseIcon = styled.div`
 
 export const CallIcon = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   cursor: pointer;
+  width: 100%;
   min-width: 100px;
   padding: 15px;
   height: ${stylesProps.navBarHeight};
@@ -114,5 +118,18 @@ export const CallIcon = styled.div`
   transition: all 0.3s ease-out;
   :hover {
     background-color: ${colors.PrimaryHover};
+  }
+`;
+
+export const ScrollToTop = styled.div`
+  width: min(10vw, 100px);
+  height: min(10vw, 100px);
+  background-color: ${colors.Primary};
+  box-shadow: 0 0 1px 2px ${colors.PrimaryBright};
+  :hover {
+    z-index: 10;
+    box-shadow: 0 0 4px 5px ${colors.PrimaryBright};
+    width: min(12vw, 120px);
+    height: min(12vw, 120px);
   }
 `;

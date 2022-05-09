@@ -42,21 +42,19 @@ const CategoryProductsLayout = ({
   selectCategory,
   selectedCategory = 0,
 }) => {
-  console.log(products);
   return (
     <>
-      <CategoryNavbar>
+      <CategoryNavbar id="category-navbar">
         {categories.map((category, index, allCategories) => {
           return (
-            <>
-              <NavbarItem
-                onClick={() => selectCategory(category.altName)}
-                active={selectedCategory === category.altName}
-                width={`${100 / allCategories.length}%`}
-              >
-                {category.title}
-              </NavbarItem>
-            </>
+            <NavbarItem
+              onClick={() => selectCategory(category.altName)}
+              active={selectedCategory === category.altName}
+              width={`${100 / allCategories.length}%`}
+              key={index}
+            >
+              {category.title}
+            </NavbarItem>
           );
         })}
       </CategoryNavbar>
@@ -66,15 +64,14 @@ const CategoryProductsLayout = ({
         </MainCircle>
         {products.map((product, index) => {
           return (
-            <>
-              <ProductCircle
-                onClick={handleClickProduct}
-                left={positions[index].left}
-                bottom={positions[index].bottom}
-              >
-                {product.shortName}
-              </ProductCircle>
-            </>
+            <ProductCircle
+              onClick={handleClickProduct}
+              left={positions[index].left}
+              bottom={positions[index].bottom}
+              key={index}
+            >
+              {product.shortName}
+            </ProductCircle>
           );
         })}
         {/* <ProductCircle onClick={handleClickProduct} left="20%" bottom="20%">

@@ -6,7 +6,6 @@ const Home = () => {
   const [selectedItem, setSelectedItem] = useState();
 
   const handleSelectItem = (name) => {
-    // window.scrollTo(0, 0);
     setSelectedItem(services.find((service) => service.altName === name));
   };
 

@@ -33,9 +33,9 @@ export const MainCircle = styled.div`
   border-radius: 50%;
   /* width: 40vw; */
   /* height: 40vw; */
-  width: min(50vw, 500px);
-  height: min(50vw, 500px);
-  margin: min(50vw, 250px) 0;
+  width: min(32vw, 500px);
+  height: min(32vw, 500px);
+  margin: min(40vw, 150px) 0;
 `;
 
 export const ImageMain = styled.div`
@@ -57,11 +57,11 @@ export const ProductCircle = styled.div`
   cursor: pointer;
   background-color: ${colors.Black};
   border-radius: 50%;
-  width: min(30vw, 300px);
-  height: min(30vw, 300px);
-  left: ${({ left }) => `calc(${left} - (min(30vw, 300px)/2))`};
-  bottom: ${({ bottom }) => `calc(${bottom} - (min(30vw, 300px)/2))`};
-  transition: all 0.3s ease-in-out;
+  width: min(25vw, 200px);
+  height: min(25vw, 200px);
+  left: ${({ left }) => `calc(${left} - (min(25vw, 200px)/2))`};
+  bottom: ${({ bottom }) => `calc(${bottom} - (min(25vw, 200px)/2))`};
+  transition: all 0.2s ease-in-out;
   overflow-wrap: anywhere;
   color: ${colors.White};
   text-align: center;
@@ -69,6 +69,11 @@ export const ProductCircle = styled.div`
   box-shadow: 0 0 1px 2px ${colors.PrimaryBright};
   :hover {
     box-shadow: 0 0 4px 5px ${colors.PrimaryBright};
+    width: min(26vw, 210px);
+    height: min(26vw, 210px);
+    left: ${({ left }) => `calc(${left} - (min(26vw, 210px)/2))`};
+    bottom: ${({ bottom }) => `calc(${bottom} - (min(26vw, 210px)/2))`};
+    z-index: 10;
   }
   /* animation: ${blink} 1s linear infinite; */
   /* bottom: -70%;
@@ -77,7 +82,8 @@ export const ProductCircle = styled.div`
 
 export const CategoryNavbar = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   /* height: 20vh; */
   justify-content: space-between;
   width: 100%;
@@ -94,7 +100,7 @@ export const NavbarItem = styled.div`
   color: ${colors.White};
   height: 70px;
   width: 100%;
-  min-width: 100px;
+  /* min-width: 100px; */
   background-color: ${({ active }) => active && `${colors.PrimaryHover}`};
   :hover {
     background-color: ${colors.PrimaryHover};

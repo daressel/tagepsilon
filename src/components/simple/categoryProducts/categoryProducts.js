@@ -6,11 +6,11 @@ const categories = services.filter((service) => service.type === 'category');
 const products = services.filter((service) => service.type !== 'category');
 
 const CategoryProducts = () => {
-  const [selectedCategory, setSelectedCategory] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].altName);
 
   const selectCategory = (name) => {
-    console.log(name);
     setSelectedCategory(name);
+    document.getElementById('category-navbar').scrollIntoView();
   };
 
   const handleClickProduct = (name) => {
