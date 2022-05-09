@@ -7,6 +7,7 @@ const Home = () => {
 
   const handleSelectItem = (name) => {
     setSelectedItem(services.find((service) => service.altName === name));
+    window.scrollTo(0, 0);
   };
 
   return <HomeLayout selectedItem={selectedItem} handleSelectItem={handleSelectItem} />;

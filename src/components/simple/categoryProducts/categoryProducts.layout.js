@@ -41,6 +41,7 @@ const CategoryProductsLayout = ({
   handleClickProduct,
   selectCategory,
   selectedCategory = 0,
+  handleSelectItem,
 }) => {
   return (
     <>
@@ -65,7 +66,7 @@ const CategoryProductsLayout = ({
         {products.map((product, index) => {
           return (
             <ProductCircle
-              onClick={handleClickProduct}
+              onClick={() => handleSelectItem(product.altName)}
               left={positions[index].left}
               bottom={positions[index].bottom}
               key={index}
@@ -74,24 +75,6 @@ const CategoryProductsLayout = ({
             </ProductCircle>
           );
         })}
-        {/* <ProductCircle onClick={handleClickProduct} left="20%" bottom="20%">
-          строительные металлоконструкции
-        </ProductCircle>
-        <ProductCircle left="80%" bottom="80%">
-          строительные металлоконструкции
-        </ProductCircle>
-        <ProductCircle left="20%" bottom="80%">
-          строительные металлоконструкции
-        </ProductCircle>
-        <ProductCircle left="80%" bottom="20%">
-          строительные металлоконструкции
-        </ProductCircle>
-        <ProductCircle left="18%" bottom="50%">
-          строительные металлоконструкции
-        </ProductCircle>
-        <ProductCircle left="82%" bottom="50%">
-          строительные металлоконструкции
-        </ProductCircle> */}
       </CategoryProductsWrapper>
     </>
   );

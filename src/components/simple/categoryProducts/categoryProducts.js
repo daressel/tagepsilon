@@ -5,7 +5,7 @@ import services from '../../../core/config/services';
 const categories = services.filter((service) => service.type === 'category');
 const products = services.filter((service) => service.type !== 'category');
 
-const CategoryProducts = () => {
+const CategoryProducts = ({ handleSelectItem }) => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].altName);
 
   const selectCategory = (name) => {
@@ -25,6 +25,7 @@ const CategoryProducts = () => {
         selectCategory={selectCategory}
         selectedCategory={selectedCategory}
         handleClickProduct={handleClickProduct}
+        handleSelectItem={handleSelectItem}
       />
     </>
   );
