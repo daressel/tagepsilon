@@ -14,9 +14,7 @@ import {
 } from './navbar.styled';
 import Link from 'next/link';
 import Icon from '../../ui/icon/icon';
-
-// const htmlEnd = '.html';
-const htmlEnd = '';
+import htmlEnd from '../../../core/constants/htmlEnd';
 
 const NavbarLayout = ({
   navbarItems,

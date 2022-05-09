@@ -9,6 +9,7 @@ import {
   ImageMain,
   CategoryContentWrapper,
 } from './categoryProducts.styled';
+import htmlEnd from '../../../core/constants/htmlEnd';
 
 const positions = [
   {
@@ -36,9 +37,6 @@ const positions = [
     bottom: '50%',
   },
 ];
-
-// const htmlEnd = '.html';
-const htmlEnd = '';
 
 const CategoryProductsLayout = ({
   categories = [],
