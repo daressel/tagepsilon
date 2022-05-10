@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import Link from 'next/link';
 import {
   CategoryProductsWrapper,
   MainCircle,
@@ -9,7 +8,6 @@ import {
   ImageMain,
   CategoryContentWrapper,
 } from './categoryProducts.styled';
-import htmlEnd from '../../../core/constants/htmlEnd';
 
 const positions = [
   {
@@ -43,6 +41,7 @@ const CategoryProductsLayout = ({
   products = [],
   selectCategory,
   selectedCategory = 0,
+  handleClickService,
 }) => {
   return (
     <>
@@ -67,11 +66,14 @@ const CategoryProductsLayout = ({
           </MainCircle>
           {products.map((product, index) => {
             return (
-              <Link href={`service/${product.altName}${htmlEnd}`} passHref key={index}>
-                <ProductCircle left={positions[index].left} bottom={positions[index].bottom}>
-                  {product.shortName}
-                </ProductCircle>
-              </Link>
+              <ProductCircle
+                onClick={() => handleClickService(product.altName)}
+                left={positions[index].left}
+                bottom={positions[index].bottom}
+                key={index}
+              >
+                {product.shortName}
+              </ProductCircle>
             );
           })}
         </CategoryProductsWrapper>

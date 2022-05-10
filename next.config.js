@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // basePath: '/tagepsilon',
+  // basePath: '/Work/tagepsilon/out',
+  // trailingSlash: true,
 };
 
 module.exports = nextConfig;
