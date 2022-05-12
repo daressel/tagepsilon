@@ -3,7 +3,7 @@ import stylesProps from '../../../core/constants/stylesProps';
 
 export const ChildrenWrapper = styled.div`
   margin-top: ${stylesProps.navBarHeight};
-  padding: 20px;
+  padding: 20px 0;
 `;
 
 export const MainWrapper = styled.div`

@@ -16,7 +16,7 @@ import Link from 'next/link';
 import Icon from '../../ui/icon/icon';
 
 // const htmlEnd = '.html';
-const htmlEnd = '';
+import htmlEnd from '../../../core/constants/htmlEnd';
 
 const NavbarLayout = ({
   navbarItems,
@@ -28,10 +28,16 @@ const NavbarLayout = ({
   return (
     <>
       <NavbarWrapper>
-        <LogoWrapper />
+        <Link href="/" passHref>
+          <LogoWrapper />
+        </Link>
         <NavbarItemsWrapper>
           {navbarItems.map((navbarItem, index) => (
-            <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
+            <Link
+              href={navbarItem.href !== '/' ? `${navbarItem.href}${htmlEnd}` : '/'}
+              passHref
+              key={index}
+            >
               <NavbarItem onClick={() => handleActiveTab(index)} active={navbarItem.active}>
                 <Title>{navbarItem.title}</Title>
               </NavbarItem>
@@ -42,6 +48,7 @@ const NavbarLayout = ({
           </NavbarItem>
           <CallIcon onClick={() => handleOpenModal('requestModal')}>
             <Icon src="icons/contact_icon.png" />
+            Оставить заявку
           </CallIcon>
         </NavbarItemsWrapper>
         <MenuIcon onClick={handleToggleSideMenu}>
@@ -49,7 +56,9 @@ const NavbarLayout = ({
         </MenuIcon>
       </NavbarWrapper>
       <SideNavbarWrapper toggleSideMenu={toggleSideMenu}>
-        <LogoWrapper />
+        <Link href="/" passHref>
+          <LogoWrapper />
+        </Link>
         <CloseIcon onClick={handleToggleSideMenu}>
           <Icon src="icons/cross_icon.png" />
         </CloseIcon>
@@ -66,6 +75,7 @@ const NavbarLayout = ({
           </SideNavbarItem>
           <CallIcon onClick={() => handleOpenModal('requestModal')}>
             <Icon src="icons/contact_icon.png" />
+            Оставить заявку
           </CallIcon>
         </SideNavbarItemsWrapper>
       </SideNavbarWrapper>

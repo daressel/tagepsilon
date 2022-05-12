@@ -50,9 +50,7 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
   z-index: 15;
   transition: all 0.4s ease-out;
   ${({ toggleSideMenu }) =>
-    toggleSideMenu
-      ? `left: 0%; overflow-y: hidden;`
-      : 'left: 100%; overflow-y: auto'};
+    toggleSideMenu ? `left: 0%; overflow-y: hidden;` : 'left: 100%; overflow-y: auto'};
   @media ${mediaSize.tablet.min} {
     left: 100%;
   }
@@ -82,6 +80,11 @@ export const LogoWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  :hover {
+    filter: brightness(1.15);
+  }
 `;
 
 export const MenuIcon = styled.div`
@@ -106,8 +109,11 @@ export const CloseIcon = styled.div`
 
 export const CallIcon = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   cursor: pointer;
+  width: 100%;
   min-width: 100px;
   padding: 15px;
   height: ${stylesProps.navBarHeight};

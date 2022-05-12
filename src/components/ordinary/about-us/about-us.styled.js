@@ -13,7 +13,7 @@ export const Title = styled.span`
   text-align: center;
   font-size: 32px;
   margin: 20px;
-  min-width: 260px;
+  min-width: 90vw;
 `;
 
 export const SubTitle = styled.span`
@@ -27,7 +27,7 @@ export const ContentWrapper = styled.div`
   padding: 40px;
   width: 100%;
   text-align: center;
-  min-width: 260px;
+  width: min(90vw, 1100px);
   margin: 10px 0;
   background-color: ${colors.PrimaryOpacity};
 `;

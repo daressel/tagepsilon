@@ -32,7 +32,7 @@ const FooterLayout = () => {
               </SocialItem>
             </a>
           </Link>
-          <Link href="https://t.me/epsilon_group" passHref>
+          <Link href="https://t.me/tagepsilon" passHref>
             <a target="_blank">
               <SocialItem>
                 <Icon src="icons/telegram_icon.png" />
