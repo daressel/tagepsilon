@@ -116,6 +116,7 @@ export const CallIcon = styled.div`
   width: 100%;
   min-width: 100px;
   padding: 15px;
+  text-align: center;
   height: ${stylesProps.navBarHeight};
   background-color: ${colors.Primary};
   transition: all 0.3s ease-out;
