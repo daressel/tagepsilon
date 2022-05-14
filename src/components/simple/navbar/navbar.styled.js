@@ -58,6 +58,11 @@ export const SideNavbarWrapper = styled(NavbarWrapper)`
 
 export const SideNavbarItem = styled(NavbarItem)`
   width: 100%;
+  ${({ active }) =>
+    active &&
+    `
+    filter: brightness(1.15);
+  `};
 `;
 
 export const SideNavbarItemsWrapper = styled(NavbarItemsWrapper)`

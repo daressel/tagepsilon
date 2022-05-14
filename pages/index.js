@@ -7,6 +7,5 @@ export default function MainPage() {
   const router = useRouter();
   const serviceName = router.query.product;
   const selectService = services.find((service) => service.altName === serviceName);
-  console.log(selectService);
   return <>{serviceName ? <Product product={selectService}></Product> : <Home />}</>;
 }

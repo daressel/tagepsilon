@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
 import {
   LogoWrapper,
   NavbarItemsWrapper,
@@ -25,60 +25,76 @@ const NavbarLayout = ({
   toggleSideMenu,
   handleOpenModal,
 }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
   return (
     <>
-      <NavbarWrapper>
-        <Link href="/" passHref>
-          <LogoWrapper />
-        </Link>
-        <NavbarItemsWrapper>
-          {navbarItems.map((navbarItem, index) => (
-            <Link
-              href={navbarItem.href !== '/' ? `${navbarItem.href}${htmlEnd}` : '/'}
-              passHref
-              key={index}
-            >
-              <NavbarItem onClick={() => handleActiveTab(index)} active={navbarItem.active}>
-                <Title>{navbarItem.title}</Title>
+      {isLoaded && (
+        <>
+          <NavbarWrapper>
+            <Link href="/" passHref>
+              <LogoWrapper />
+            </Link>
+            <NavbarItemsWrapper>
+              {navbarItems.map((navbarItem, index) => {
+                return (
+                  <Link
+                    href={navbarItem.href !== '/' ? `${navbarItem.href}${htmlEnd}` : '/'}
+                    passHref
+                    key={index}
+                  >
+                    <NavbarItem
+                      onClick={() => handleActiveTab(index)}
+                      active={localStorage && index == localStorage.getItem('activeNav')}
+                    >
+                      <Title>{navbarItem.title}</Title>
+                    </NavbarItem>
+                  </Link>
+                );
+              })}
+              <NavbarItem onClick={() => handleOpenModal('questionnaireModal')}>
+                <Title>Пройти опрос</Title>
               </NavbarItem>
+              <CallIcon onClick={() => handleOpenModal('requestModal')}>
+                <Icon src="icons/contact_icon.png" />
+                Оставить заявку
+              </CallIcon>
+            </NavbarItemsWrapper>
+            <MenuIcon onClick={handleToggleSideMenu}>
+              <Icon src="icons/list_menu_icon.png" />
+            </MenuIcon>
+          </NavbarWrapper>
+          <SideNavbarWrapper toggleSideMenu={toggleSideMenu}>
+            <Link href="/" passHref>
+              <LogoWrapper />
             </Link>
-          ))}
-          <NavbarItem onClick={() => handleOpenModal('questionnaireModal')}>
-            <Title>Пройти опрос</Title>
-          </NavbarItem>
-          <CallIcon onClick={() => handleOpenModal('requestModal')}>
-            <Icon src="icons/contact_icon.png" />
-            Оставить заявку
-          </CallIcon>
-        </NavbarItemsWrapper>
-        <MenuIcon onClick={handleToggleSideMenu}>
-          <Icon src="icons/list_menu_icon.png" />
-        </MenuIcon>
-      </NavbarWrapper>
-      <SideNavbarWrapper toggleSideMenu={toggleSideMenu}>
-        <Link href="/" passHref>
-          <LogoWrapper />
-        </Link>
-        <CloseIcon onClick={handleToggleSideMenu}>
-          <Icon src="icons/cross_icon.png" />
-        </CloseIcon>
-        <SideNavbarItemsWrapper>
-          {navbarItems.map((navbarItem, index) => (
-            <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
-              <SideNavbarItem onClick={() => handleActiveTab(index)} active={navbarItem.active}>
-                <Title>{navbarItem.title}</Title>
+            <CloseIcon onClick={handleToggleSideMenu}>
+              <Icon src="icons/cross_icon.png" />
+            </CloseIcon>
+            <SideNavbarItemsWrapper>
+              {navbarItems.map((navbarItem, index) => (
+                <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
+                  <SideNavbarItem
+                    onClick={() => handleActiveTab(index)}
+                    active={localStorage && index == localStorage.getItem('activeNav')}
+                  >
+                    <Title>{navbarItem.title}</Title>
+                  </SideNavbarItem>
+                </Link>
+              ))}
+              <SideNavbarItem onClick={() => handleOpenModal('questionnaireModal')}>
+                <Title>Пройти опрос</Title>
               </SideNavbarItem>
-            </Link>
-          ))}
-          <SideNavbarItem onClick={() => handleOpenModal('questionnaireModal')}>
-            <Title>Пройти опрос</Title>
-          </SideNavbarItem>
-          <CallIcon onClick={() => handleOpenModal('requestModal')}>
-            <Icon src="icons/contact_icon.png" />
-            Оставить заявку
-          </CallIcon>
-        </SideNavbarItemsWrapper>
-      </SideNavbarWrapper>
+              <CallIcon onClick={() => handleOpenModal('requestModal')}>
+                <Icon src="icons/contact_icon.png" />
+                Оставить заявку
+              </CallIcon>
+            </SideNavbarItemsWrapper>
+          </SideNavbarWrapper>
+        </>
+      )}
     </>
   );
 };

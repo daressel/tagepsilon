@@ -56,6 +56,7 @@ export const EmailWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-content: center;
+
   width: 100%;
 `;
 
@@ -63,7 +64,14 @@ export const Phone = styled.a`
   font-size: 18px;
   align-self: center;
   margin: 10px;
+  background-color: ${colors.Primary};
+  padding: 13px;
   cursor: pointer;
+  border-radius: 7px;
+  transition: all 0.3s ease-out;
+  :hover {
+    filter: brightness(1.15);
+  }
 `;
 
 export const Email = styled.a`
@@ -71,4 +79,11 @@ export const Email = styled.a`
   align-self: center;
   margin: 10px;
   cursor: pointer;
+  background-color: ${colors.Primary};
+  padding: 13px;
+  border-radius: 7px;
+  transition: all 0.3s ease-out;
+  :hover {
+    filter: brightness(1.15);
+  }
 `;

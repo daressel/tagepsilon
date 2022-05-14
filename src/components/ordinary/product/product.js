@@ -37,11 +37,9 @@ const Product = ({ product, handleSelectItem }) => {
       setInterval(() => {
         setActiveImage((prev) => {
           let result = prev + 1;
-
           if (result === product.images.length) {
             result = 0;
           }
-
           if (result < 0) {
             result = product.images.length - 1;
           }

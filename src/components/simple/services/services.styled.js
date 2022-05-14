@@ -21,7 +21,7 @@ export const ServiceWrapper = styled.div`
   cursor: pointer;
   transition: all 0.2s ease-out;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   background-image: url(${({ image }) => (image ? image : 'images/logo_without_back.png')});
   :hover {

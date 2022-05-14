@@ -15,12 +15,13 @@ export const ProductTitle = styled.div`
 export const ProductImage = styled.div`
   display: flex;
   align-self: center;
-  width: min(90vw, 350px);
-  height: min(90vw, 350px);
+  width: min(90vw, 600px);
+  height: min(90vw, 600px);
   transition: all 0.2s ease-out;
   background-image: url(${({ image }) => (image ? image : 'images/logo_without_back.png')});
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain;
+  background-position: 50% 50%;
 `;
 
 export const HeadWrapper = styled.div`
