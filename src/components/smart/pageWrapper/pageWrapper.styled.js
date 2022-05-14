@@ -10,4 +10,5 @@ export const MainWrapper = styled.div`
   background-image: url('images/background1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
 `;
