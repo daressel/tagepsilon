@@ -1,9 +1,11 @@
 import emailjs from '@emailjs/browser';
+import { useRouter } from 'next/router';
 import { memo, useState } from 'react';
 import { useModalContext } from '../../../core/context/modalContext';
 import NavbarLayout from './navbar.layout';
 
 const Navbar = ({ data }) => {
+  const router = useRouter();
   const [items, setItems] = useState(data);
   const [modal, setModal] = useModalContext();
 
@@ -22,6 +24,12 @@ const Navbar = ({ data }) => {
     document.body.style.overflow = 'unset';
   };
 
+  const handleClickLogo = () => {
+    localStorage.setItem('activeNav', 0);
+    document.body.style.overflow = 'unset';
+    router.push('/');
+  };
+
   const handleOpenModal = async (name) => {
     setModal(name);
   };
@@ -29,6 +37,7 @@ const Navbar = ({ data }) => {
   return (
     <NavbarLayout
       navbarItems={items}
+      handleClickLogo={handleClickLogo}
       handleActiveTab={handleActiveTab}
       handleToggleSideMenu={handleToggleSideMenu}
       toggleSideMenu={toggleSideMenu}

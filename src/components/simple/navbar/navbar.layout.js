@@ -24,6 +24,7 @@ const NavbarLayout = ({
   handleToggleSideMenu,
   toggleSideMenu,
   handleOpenModal,
+  handleClickLogo,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -34,9 +35,7 @@ const NavbarLayout = ({
       {isLoaded && (
         <>
           <NavbarWrapper>
-            <Link href="/" passHref>
-              <LogoWrapper />
-            </Link>
+            <LogoWrapper onClick={handleClickLogo} />
             <NavbarItemsWrapper>
               {navbarItems.map((navbarItem, index) => {
                 return (
@@ -67,9 +66,7 @@ const NavbarLayout = ({
             </MenuIcon>
           </NavbarWrapper>
           <SideNavbarWrapper toggleSideMenu={toggleSideMenu}>
-            <Link href="/" passHref>
-              <LogoWrapper />
-            </Link>
+            <LogoWrapper onClick={handleClickLogo} />
             <CloseIcon onClick={handleToggleSideMenu}>
               <Icon src="icons/cross_icon.png" />
             </CloseIcon>
