@@ -12,7 +12,7 @@ const ServicesLayout = ({ items, selectedItem, handleSelectItem }) => {
             {items.map((item) => (
               <ServiceWrapper
                 key={item.altName}
-                image={item.images[0]}
+                image={(item.images && item.images[0]) || 0}
                 onClick={() => handleSelectItem(item.altName)}
               >
                 <ServiceTitle>{item.title}</ServiceTitle>

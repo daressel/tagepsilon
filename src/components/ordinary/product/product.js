@@ -34,6 +34,7 @@ const Product = ({ product, handleSelectItem }) => {
     clearInterval(interval);
     interval =
       !blockInterval &&
+      product.images?.length &&
       setInterval(() => {
         setActiveImage((prev) => {
           let result = prev + 1;
