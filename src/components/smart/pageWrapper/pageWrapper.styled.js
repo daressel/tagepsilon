@@ -3,6 +3,7 @@ import stylesProps from '../../../core/constants/stylesProps';
 
 export const ChildrenWrapper = styled.div`
   margin-top: ${stylesProps.navBarHeight};
+  min-height: 85vh;
   padding: 20px 0;
 `;
 
