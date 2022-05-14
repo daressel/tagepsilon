@@ -72,7 +72,11 @@ const NavbarLayout = ({
             </CloseIcon>
             <SideNavbarItemsWrapper>
               {navbarItems.map((navbarItem, index) => (
-                <Link href={`${navbarItem.href}${htmlEnd}`} passHref key={index}>
+                <Link
+                  href={navbarItem.href !== '/' ? `${navbarItem.href}${htmlEnd}` : '/'}
+                  passHref
+                  key={index}
+                >
                   <SideNavbarItem
                     onClick={() => handleActiveTab(index)}
                     active={localStorage && index == localStorage.getItem('activeNav')}
